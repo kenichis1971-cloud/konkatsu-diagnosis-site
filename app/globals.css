@@ -178,6 +178,48 @@ p {
   padding: clamp(56px, 8vw, 104px) clamp(20px, 5vw, 72px);
 }
 
+.section--diagnosis-cta {
+  padding-top: clamp(40px, 6vw, 72px);
+  padding-bottom: clamp(40px, 6vw, 72px);
+  background: linear-gradient(180deg, rgba(255, 250, 244, 0.96), #fff4ed);
+}
+
+.diagnosis-cta-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  gap: clamp(24px, 5vw, 48px);
+  align-items: center;
+  padding: clamp(28px, 5vw, 48px);
+  border: 1px solid rgba(255, 46, 69, 0.18);
+  border-radius: var(--radius-large);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--shadow-card);
+}
+
+.diagnosis-cta-card h2 {
+  max-width: 700px;
+}
+
+.diagnosis-cta-card p {
+  margin-bottom: 0;
+}
+
+.diagnosis-cta-card__action {
+  display: grid;
+  gap: 14px;
+  justify-items: start;
+}
+
+.diagnosis-cta-card__action p {
+  font-size: 0.94rem;
+}
+
+.button--large {
+  min-height: 56px;
+  padding: 16px 28px;
+  font-size: 1.02rem;
+}
+
 .section--soft {
   background: var(--color-soft);
 }
@@ -323,6 +365,16 @@ p {
   .two-column,
   .card-grid {
     grid-template-columns: 1fr;
+  }
+
+  .diagnosis-cta-card {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+
+  .diagnosis-cta-card__action,
+  .diagnosis-cta-card__action .button {
+    width: 100%;
   }
 }
 

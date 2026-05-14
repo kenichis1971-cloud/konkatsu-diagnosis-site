@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Hero } from "@/components/Hero";
 
 const features = [
@@ -28,8 +29,27 @@ export default function Home() {
         }
         description="結婚や婚活について考えはじめたとき、自分に合う進め方や大切にしたい価値観を見つめるための診断サイトです。"
         ctaHref="/diagnosis"
-        ctaLabel="診断ページを見る"
+        ctaLabel="まずは10問で診断する"
       />
+
+      <section className="section section--diagnosis-cta" aria-labelledby="diagnosis-cta-title">
+        <div className="section__inner diagnosis-cta-card">
+          <div className="diagnosis-cta-card__content">
+            <p className="eyebrow">10 Questions</p>
+            <h2 id="diagnosis-cta-title">10問で婚活スタイルを整理してみませんか</h2>
+            <p>
+              4択の質問に答えながら、自分に合いそうな出会い方や進め方を見つめる診断です。
+              診断結果は、自己理解と選択肢整理の参考として使えます。
+            </p>
+          </div>
+          <div className="diagnosis-cta-card__action">
+            <Link className="button button--large" href="/diagnosis">
+              自分に合う婚活スタイルを見てみる
+            </Link>
+            <p>所要時間の目安は数分です。気軽に今の考えを整理できます。</p>
+          </div>
+        </div>
+      </section>
 
       <section className="section section--soft" aria-labelledby="about-title">
         <div className="section__inner two-column">

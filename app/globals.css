@@ -148,7 +148,7 @@ p {
   margin-top: 18px;
   padding: 14px 24px;
   border-radius: 999px;
-  background: var(--color-accent);
+  background: #ff2e45;
   color: #fff;
   font-weight: 700;
   box-shadow: 0 12px 24px rgba(157, 93, 81, 0.24);
@@ -156,7 +156,7 @@ p {
 
 .button:hover,
 .button:focus-visible {
-  background: var(--color-accent-dark);
+  background: #e6293e;
 }
 
 .section,

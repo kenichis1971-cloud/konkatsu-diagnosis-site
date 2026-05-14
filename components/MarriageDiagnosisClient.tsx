@@ -59,15 +59,26 @@ export function MarriageDiagnosisClient() {
             <h3>おすすめの次の一歩</h3>
             <p>{result.nextStep}</p>
           </section>
-          <section>
-            <h3>関連導線の準備枠</h3>
-            <ul className="diagnosis-link-list">
-              {result.links.map((link) => (
-                <li key={link}>{link}</li>
-              ))}
-            </ul>
-          </section>
         </div>
+        <section className="diagnosis-next-actions" aria-labelledby="diagnosis-next-actions-title">
+          <div>
+            <p className="eyebrow">Next actions</p>
+            <h3 id="diagnosis-next-actions-title">次にできること</h3>
+            <p>
+              診断結果をもとに、自己理解と選択肢整理に使いやすいコンテンツを準備しています。
+              気になるものから確認できるよう、今後順次追加予定です。
+            </p>
+          </div>
+          <div className="diagnosis-next-actions__grid">
+            {result.actionCards.map((card) => (
+              <article className="diagnosis-next-action-card" key={card.title}>
+                <span>準備中</span>
+                <h4>{card.title}</h4>
+                <p>{card.description}</p>
+              </article>
+            ))}
+          </div>
+        </section>
         <p className="note">
           この診断は自己理解と選択肢整理の補助を目的としており、特定の結果や将来を保証するものではありません。
         </p>

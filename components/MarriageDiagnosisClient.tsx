@@ -44,8 +44,14 @@ export function MarriageDiagnosisClient() {
   if (isComplete) {
     return (
       <div className="diagnosis-card diagnosis-card--result" aria-live="polite">
-        <p className="eyebrow">Result</p>
-        <h2>{result.title}</h2>
+        <div className="diagnosis-result-header">
+          <p className="eyebrow">Result</p>
+          <h2>{result.title}</h2>
+          <p>
+            この結果は、今の自分を整理し、婚活で見直せそうな選択肢を考えるための参考です。
+            「今の傾向」から順に読み進めると、次に確認したいことが見つけやすくなります。
+          </p>
+        </div>
         <div className="diagnosis-result-grid">
           <section>
             <h3>今の傾向</h3>
@@ -60,13 +66,19 @@ export function MarriageDiagnosisClient() {
             <p>{result.nextStep}</p>
           </section>
         </div>
+        <div className="diagnosis-result-bridge">
+          <p>
+            結果を読んで気になった部分があれば、下の候補から近いものを選んでみてください。
+            すぐに決めるためではなく、今の自分に合う確認先を増やすための案内です。
+          </p>
+        </div>
         <section className="diagnosis-next-actions" aria-labelledby="diagnosis-next-actions-title">
           <div>
             <p className="eyebrow">Next actions</p>
             <h3 id="diagnosis-next-actions-title">次にできること</h3>
             <p>
               診断結果をもとに、自己理解と選択肢整理に使いやすいコンテンツを準備しています。
-              気になるものから確認できるよう、今後順次追加予定です。
+              気になるテーマから確認できるよう、今後順次追加予定です。
             </p>
           </div>
           <div className="diagnosis-next-actions__grid">
@@ -81,13 +93,14 @@ export function MarriageDiagnosisClient() {
         </section>
         <p className="note">
           この診断は自己理解と選択肢整理の補助を目的としており、特定の結果や将来を保証するものではありません。
+          不安をあおるものではなく、今の気持ちを言葉にするための参考としてご利用ください。
         </p>
         <div className="diagnosis-actions">
           <button className="diagnosis-button diagnosis-button--subtle" type="button" onClick={handleBack}>
             戻る
           </button>
           <button className="diagnosis-button" type="button" onClick={handleRestart}>
-            もう一度診断する
+            もう一度、今の気持ちで診断する
           </button>
         </div>
       </div>

@@ -82,18 +82,19 @@ a {
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(255, 250, 244, 0.88), rgba(255, 250, 244, 0.62)), rgba(255, 244, 237, 0.22);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 250, 244, 0.38),
+    rgba(255, 250, 244, 0.18)
+  );
 }
 
 .hero__content {
   position: relative;
-  width: min(960px, 100%);
-  padding: clamp(32px, 6vw, 72px);
-  border: 1px solid rgba(255, 255, 255, 0.76);
-  border-radius: var(--radius-large);
-  background: rgba(255, 255, 255, 0.66);
-  box-shadow: var(--shadow-card);
-  backdrop-filter: blur(8px);
+  width: min(1120px, 100%);
+  padding: clamp(32px, 6vw, 72px) 0;
+  text-align: left;
+  text-shadow: 0 2px 18px rgba(255, 250, 244, 0.72);
 }
 
 .eyebrow {

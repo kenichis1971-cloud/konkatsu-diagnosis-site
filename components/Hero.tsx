@@ -1,8 +1,9 @@
+import type { ReactNode } from "react";
 import Link from "next/link";
 
 type HeroProps = {
   eyebrow?: string;
-  title: string;
+  title: ReactNode;
   description: string;
   ctaHref?: string;
   ctaLabel?: string;

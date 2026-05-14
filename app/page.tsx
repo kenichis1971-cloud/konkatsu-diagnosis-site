@@ -20,7 +20,12 @@ export default function Home() {
     <main>
       <Hero
         eyebrow="Konkatsu Diagnosis"
-        title="婚活の迷いを、やさしく整理する診断サイト"
+        title={
+          <>
+            <span className="hero__title-line">あなたに合う</span>
+            <span className="hero__title-line">婚活スタイル診断</span>
+          </>
+        }
         description="結婚や婚活について考えはじめたとき、自分に合う進め方や大切にしたい価値観を見つめるための診断サイトです。"
         ctaHref="/diagnosis"
         ctaLabel="診断ページを見る"

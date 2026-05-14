@@ -9,7 +9,7 @@ const siteDescription =
 
 export const metadata: Metadata = {
   title: {
-    default: `${siteName}｜婚活の迷いを、やさしく整理する診断サイト`,
+    default: "あなたに合う婚活スタイル診断",
     template: `%s｜${siteName}`,
   },
   description: siteDescription,

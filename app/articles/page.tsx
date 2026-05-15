@@ -4,7 +4,7 @@ const articleCards = [
   {
     label: "準備中",
     title: "婚活を始める前に整理したいこと",
-    body: "出会い方を選ぶ前に、今の気持ち・生活のペース・大切にしたい価値観をやさしく書き出すための読みものを準備しています。",
+    body: "出会い方を選ぶ前に、今の気持ち・生活のペース・大切にしたい価値観をやさしく書き出すためのコラムを準備しています。",
   },
   {
     label: "準備中",
@@ -30,7 +30,7 @@ const guideItems = [
 ];
 
 export const metadata: Metadata = {
-  title: "婚活の選択肢を整理する読みもの",
+  title: "婚活コラム",
   description:
     "婚活を始める前の整理、結婚相談所や婚活アプリの見方、自分の結婚観を見直すヒントを準備している記事ページです。",
 };
@@ -41,7 +41,7 @@ export default function ArticlesPage() {
       <section className="articles-hero" aria-labelledby="articles-title">
         <div className="articles-hero__content">
           <p className="eyebrow">Articles</p>
-          <h1 id="articles-title">婚活の選択肢を整理する読みもの</h1>
+          <h1 id="articles-title">婚活コラム</h1>
           <p>
             婚活を始める前の気持ちや、結婚相談所・婚活アプリなどの選択肢を、
             自分のペースで見つめるための記事ページを準備しています。
@@ -58,7 +58,7 @@ export default function ArticlesPage() {
           <div className="text-card articles-role-card">
             <p>
               このページでは、特定の方法を急いで選ぶためではなく、婚活にまつわる考え方や
-              比較の視点を整理する読みものを少しずつ追加していく予定です。
+              比較の視点を整理するコラムを少しずつ追加していく予定です。
             </p>
             <ul className="articles-guide-list">
               {guideItems.map((item) => (

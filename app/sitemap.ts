@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 const baseUrl = "https://konkatsu-diagnosis-site.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ["", "/diagnosis", "/privacy", "/terms", "/contact"];
+  const routes = ["", "/diagnosis", "/articles", "/privacy", "/terms", "/contact"];
 
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,

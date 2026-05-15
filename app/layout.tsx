@@ -25,6 +25,7 @@ export const metadata: Metadata = {
 const navigation = [
   { href: "/", label: "トップ" },
   { href: "/diagnosis", label: "診断" },
+  { href: "/articles", label: "読みもの" },
   { href: "/privacy", label: "プライバシー" },
   { href: "/terms", label: "利用規約" },
   { href: "/contact", label: "お問い合わせ" },

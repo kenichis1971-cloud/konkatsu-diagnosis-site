@@ -27,6 +27,7 @@ const navigation = [
   { href: "/diagnosis", label: "診断" },
   { href: "/articles", label: "コラム" },
   { href: "/marriage-agencies", label: "相談所比較" },
+  { href: "/marriage-apps", label: "婚活アプリ比較" },
   { href: "/privacy", label: "プライバシー" },
   { href: "/terms", label: "利用規約" },
   { href: "/contact", label: "お問い合わせ" },

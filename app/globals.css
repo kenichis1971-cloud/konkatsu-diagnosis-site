@@ -893,3 +893,229 @@ p {
     font-size: clamp(1.8rem, 8.2vw, 2.8rem);
   }
 }
+
+.apps-hero {
+  position: relative;
+  display: grid;
+  min-height: clamp(440px, 48vw, 640px);
+  align-items: center;
+  overflow: hidden;
+  padding: clamp(64px, 8vw, 112px) clamp(20px, 5vw, 72px);
+  background-color: #f7e9df;
+  background-image: url("/images/marriage-apps-hero-desktop.png");
+  background-position: center 48%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.apps-hero::before {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(255, 250, 244, 0.78), rgba(255, 250, 244, 0.34) 46%, rgba(255, 250, 244, 0.08) 72%),
+    linear-gradient(180deg, rgba(255, 250, 244, 0.08), rgba(103, 74, 58, 0.1));
+  content: "";
+}
+
+.apps-hero__content {
+  position: relative;
+  z-index: 2;
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: clamp(24px, 4vw, 48px) clamp(12px, 2.5vw, 36px);
+  transform: translateY(clamp(-28px, -2vw, -16px));
+  text-shadow: 0 2px 18px rgba(255, 250, 244, 0.78), 0 1px 8px rgba(103, 74, 58, 0.16);
+}
+
+.apps-hero__content h1 {
+  max-width: 780px;
+  margin-bottom: 18px;
+  font-size: clamp(2rem, 4.4vw, 4rem);
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.apps-title-line {
+  display: block;
+}
+
+.apps-hero__content p:not(.eyebrow) {
+  max-width: 740px;
+  margin-bottom: 0;
+  font-size: clamp(1rem, 2vw, 1.14rem);
+}
+
+.apps-content-shell {
+  padding-top: clamp(40px, 6vw, 72px);
+}
+
+.apps-overview,
+.apps-checklist,
+.apps-difference,
+.apps-next-step {
+  display: grid;
+  gap: clamp(20px, 4vw, 32px);
+  margin-bottom: clamp(36px, 6vw, 56px);
+}
+
+.apps-overview {
+  grid-template-columns: minmax(0, 1.12fr) minmax(260px, 0.88fr);
+  align-items: stretch;
+}
+
+.apps-status-card,
+.apps-card,
+.apps-checklist,
+.apps-difference,
+.apps-next-step,
+.apps-difference-card {
+  border: 1px solid rgba(201, 135, 122, 0.18);
+  border-radius: var(--radius-medium);
+  background: rgba(255, 253, 250, 0.92);
+  box-shadow: 0 16px 36px rgba(103, 74, 58, 0.09);
+}
+
+.apps-status-card {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  padding: clamp(22px, 4vw, 30px);
+  background: linear-gradient(135deg, #fff8f2, #f8eee7);
+}
+
+.apps-status-card span,
+.apps-card span {
+  width: fit-content;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(157, 93, 81, 0.18);
+  background: #f7ded6;
+  color: var(--color-accent-dark);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.apps-status-card h3,
+.apps-status-card p,
+.apps-card h3,
+.apps-card p,
+.apps-checklist p,
+.apps-difference p,
+.apps-difference-card p,
+.apps-next-step p {
+  margin-bottom: 0;
+}
+
+.apps-card-grid,
+.apps-difference-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.apps-card-grid {
+  margin-bottom: clamp(34px, 5vw, 52px);
+}
+
+.apps-card {
+  display: grid;
+  gap: 12px;
+  padding: clamp(22px, 4vw, 28px);
+}
+
+.apps-checklist,
+.apps-difference,
+.apps-next-step {
+  padding: clamp(24px, 4vw, 34px);
+}
+
+.apps-checklist {
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  align-items: start;
+  background: #fff7f1;
+}
+
+.apps-checklist ul {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.apps-checklist li {
+  position: relative;
+  padding-left: 30px;
+  color: var(--color-muted);
+  line-height: 1.8;
+}
+
+.apps-checklist li::before {
+  position: absolute;
+  top: 0.72em;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  content: "";
+}
+
+.apps-difference {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 247, 241, 0.92));
+}
+
+.apps-difference-card {
+  padding: 22px;
+  box-shadow: none;
+}
+
+.apps-difference-card h3 {
+  color: var(--color-accent-dark);
+}
+
+.apps-next-step {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+@media (max-width: 780px) {
+  .apps-hero {
+    min-height: clamp(500px, 132vw, 660px);
+    padding: 64px 16px 52px;
+    background-image: url("/images/marriage-apps-hero-mobile.png");
+    background-position: center 46%;
+  }
+
+  .apps-hero::before {
+    background:
+      linear-gradient(180deg, rgba(255, 250, 244, 0.7), rgba(255, 250, 244, 0.4) 58%, rgba(255, 250, 244, 0.5)),
+      linear-gradient(90deg, rgba(255, 250, 244, 0.76), rgba(255, 250, 244, 0.16));
+  }
+
+  .apps-hero__content {
+    padding: 24px 10px 0;
+    transform: translateY(-8px);
+  }
+
+  .apps-hero__content h1 {
+    font-size: clamp(1.8rem, 8.2vw, 2.8rem);
+  }
+
+  .apps-overview,
+  .apps-card-grid,
+  .apps-checklist,
+  .apps-difference-grid,
+  .apps-next-step {
+    grid-template-columns: 1fr;
+  }
+
+  .apps-next-step .diagnosis-button {
+    width: 100%;
+  }
+}

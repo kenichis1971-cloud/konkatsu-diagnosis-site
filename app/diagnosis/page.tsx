@@ -1,12 +1,28 @@
 import { Hero } from "@/components/Hero";
 import { MarriageDiagnosisClient } from "@/components/MarriageDiagnosisClient";
+import { type DiagnosisTypeId, isDiagnosisTypeId } from "@/lib/marriageDiagnosis";
 
 export const metadata = {
   title: "あなたに合う婚活スタイル診断",
   description: "10問の固定ロジックで、婚活への向き合い方や選択肢を整理するための診断ページです。",
 };
 
-export default function DiagnosisPage() {
+type DiagnosisPageProps = {
+  searchParams?: Promise<{
+    result?: string | string[];
+  }>;
+};
+
+function getInitialResultId(result: string | string[] | undefined): DiagnosisTypeId | undefined {
+  const value = Array.isArray(result) ? result[0] : result;
+
+  return isDiagnosisTypeId(value) ? value : undefined;
+}
+
+export default async function DiagnosisPage({ searchParams }: DiagnosisPageProps) {
+  const params = await searchParams;
+  const initialResultId = getInitialResultId(params?.result);
+
   return (
     <main>
       <Hero
@@ -21,7 +37,7 @@ export default function DiagnosisPage() {
       />
       <section className="section section--soft">
         <div className="section__inner diagnosis-frame">
-          <MarriageDiagnosisClient />
+          <MarriageDiagnosisClient initialResultId={initialResultId} />
         </div>
       </section>
     </main>

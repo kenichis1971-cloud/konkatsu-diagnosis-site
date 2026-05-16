@@ -1,3 +1,5 @@
+import { DiagnosisReturnLink, type DiagnosisReturnSearchParams } from "@/components/DiagnosisReturnLink";
+
 export const metadata = {
   title: "婚活コラム",
   description: "婚活の考え方や出会い方を、自分らしく整理するためのコラムページです。",
@@ -18,7 +20,13 @@ const articleCards = [
   },
 ];
 
-export default function ArticlesPage() {
+type ArticlesPageProps = {
+  searchParams?: Promise<DiagnosisReturnSearchParams>;
+};
+
+export default async function ArticlesPage({ searchParams }: ArticlesPageProps) {
+  const params = (await searchParams) ?? {};
+
   return (
     <main>
       <section className="articles-hero" aria-labelledby="articles-title">
@@ -38,6 +46,7 @@ export default function ArticlesPage() {
 
       <section className="section section--soft" aria-labelledby="articles-list-title">
         <div className="section__inner">
+          <DiagnosisReturnLink searchParams={params} />
           <p className="eyebrow">Articles</p>
           <h2 id="articles-list-title">婚活を落ち着いて考えるヒント</h2>
           <div className="card-grid">

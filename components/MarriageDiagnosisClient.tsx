@@ -6,6 +6,7 @@ import {
   type DiagnosisTypeId,
   diagnosisQuestions,
   getDiagnosisResult,
+  getDiagnosisResultByType,
 } from "@/lib/marriageDiagnosis";
 
 type NextActionLink = {
@@ -33,15 +34,25 @@ function getNextActionTitle(title: string) {
   return title.replace(" 準備中", "");
 }
 
-export function MarriageDiagnosisClient() {
+type MarriageDiagnosisClientProps = {
+  initialResultId?: DiagnosisTypeId;
+};
+
+export function MarriageDiagnosisClient({ initialResultId }: MarriageDiagnosisClientProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<DiagnosisTypeId[]>([]);
+  const [queryResultId, setQueryResultId] = useState<DiagnosisTypeId | null>(initialResultId ?? null);
   const isComplete = answers.length === diagnosisQuestions.length;
+  const isResultVisible = isComplete || queryResultId !== null;
   const currentQuestion = diagnosisQuestions[currentIndex];
-  const result = useMemo(() => getDiagnosisResult(answers), [answers]);
+  const result = useMemo(
+    () => (queryResultId ? getDiagnosisResultByType(queryResultId) : getDiagnosisResult(answers)),
+    [answers, queryResultId],
+  );
   const progressValue = isComplete ? 100 : Math.round((currentIndex / diagnosisQuestions.length) * 100);
 
   const handleAnswer = (answer: DiagnosisTypeId) => {
+    setQueryResultId(null);
     const nextAnswers = [...answers.slice(0, currentIndex), answer];
     setAnswers(nextAnswers);
 
@@ -51,6 +62,13 @@ export function MarriageDiagnosisClient() {
   };
 
   const handleBack = () => {
+    if (queryResultId) {
+      setQueryResultId(null);
+      setCurrentIndex(0);
+      setAnswers([]);
+      return;
+    }
+
     if (isComplete) {
       setCurrentIndex(diagnosisQuestions.length - 1);
       setAnswers((currentAnswers) => currentAnswers.slice(0, -1));
@@ -63,11 +81,12 @@ export function MarriageDiagnosisClient() {
   };
 
   const handleRestart = () => {
+    setQueryResultId(null);
     setCurrentIndex(0);
     setAnswers([]);
   };
 
-  if (isComplete) {
+  if (isResultVisible) {
     return (
       <div className="diagnosis-card diagnosis-card--result" aria-live="polite">
         <div className="diagnosis-result-header">
@@ -123,7 +142,7 @@ export function MarriageDiagnosisClient() {
                 return (
                   <Link
                     className="diagnosis-next-action-card diagnosis-next-action-card--link"
-                    href={link.href}
+                    href={`${link.href}?from=diagnosis&result=${result.id}`}
                     key={card.title}
                     aria-label={`${title}のページを見る`}
                   >

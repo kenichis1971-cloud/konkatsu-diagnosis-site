@@ -477,6 +477,16 @@ p {
   align-items: center;
 }
 
+.diagnosis-return-link {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 18px;
+}
+
+.diagnosis-return-link .diagnosis-button {
+  min-height: 44px;
+}
+
 .diagnosis-button {
   display: inline-flex;
   align-items: center;

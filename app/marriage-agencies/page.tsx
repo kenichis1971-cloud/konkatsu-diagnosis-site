@@ -42,6 +42,16 @@ export default function MarriageAgenciesPage() {
     <PageShell
       title="結婚相談所を選ぶ前に整理したいこと"
       lead="診断結果とあわせて、サポート・費用・出会いの数・進め方などを落ち着いて見比べるための準備ページです。特定サービスの紹介や外部リンクは、今後の掲載に向けて準備中です。"
+      introVisual={
+        <picture className="agencies-hero-media">
+          <source media="(max-width: 780px)" srcSet="/images/marriage-agencies-hero-mobile.png" />
+          <img
+            src="/images/marriage-agencies-hero-desktop.png"
+            alt=""
+            className="agencies-hero-image"
+          />
+        </picture>
+      }
     >
       <section className="agencies-overview" aria-labelledby="agencies-overview-title">
         <div>

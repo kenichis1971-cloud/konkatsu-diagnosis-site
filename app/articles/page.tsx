@@ -46,7 +46,6 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
 
       <section className="section section--soft" aria-labelledby="articles-list-title">
         <div className="section__inner">
-          <DiagnosisReturnLink searchParams={params} />
           <p className="eyebrow">Articles</p>
           <h2 id="articles-list-title">婚活を落ち着いて考えるヒント</h2>
           <div className="card-grid">
@@ -57,6 +56,7 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
               </article>
             ))}
           </div>
+          <DiagnosisReturnLink searchParams={params} />
         </div>
       </section>
     </main>

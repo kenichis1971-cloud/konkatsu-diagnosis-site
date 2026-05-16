@@ -61,7 +61,6 @@ export default async function MarriageAgenciesPage({ searchParams }: MarriageAge
       </section>
 
       <div className="page-shell agencies-content-shell">
-        <DiagnosisReturnLink searchParams={params} />
         <section className="page-card content-area">
           <section className="agencies-overview" aria-labelledby="agencies-overview-title">
             <div>
@@ -122,6 +121,7 @@ export default async function MarriageAgenciesPage({ searchParams }: MarriageAge
               10問診断で整理する
             </Link>
           </section>
+          <DiagnosisReturnLink searchParams={params} />
         </section>
       </div>
     </main>

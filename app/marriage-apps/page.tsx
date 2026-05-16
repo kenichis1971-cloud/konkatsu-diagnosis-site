@@ -71,7 +71,6 @@ export default async function MarriageAppsPage({ searchParams }: MarriageAppsPag
       </section>
 
       <div className="page-shell apps-content-shell">
-        <DiagnosisReturnLink searchParams={params} />
         <section className="page-card content-area">
           <section className="apps-overview" aria-labelledby="apps-overview-title">
             <div>
@@ -150,6 +149,7 @@ export default async function MarriageAppsPage({ searchParams }: MarriageAppsPag
               10問診断で整理する
             </Link>
           </section>
+          <DiagnosisReturnLink searchParams={params} />
         </section>
       </div>
     </main>

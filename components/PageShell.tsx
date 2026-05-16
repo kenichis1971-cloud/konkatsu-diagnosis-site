@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
 type PageShellProps = {
-  title: string;
+  title: ReactNode;
   lead: string;
   children: ReactNode;
   introVisual?: ReactNode;

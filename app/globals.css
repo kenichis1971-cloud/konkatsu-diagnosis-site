@@ -745,6 +745,7 @@ p {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
   margin-top: 22px;
+  margin-bottom: clamp(34px, 5vw, 52px);
 }
 
 .agencies-card {

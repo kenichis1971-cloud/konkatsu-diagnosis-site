@@ -814,21 +814,45 @@ p {
   }
 }
 
-.page-card--intro-with-visual {
+.agencies-hero {
+  position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.62fr);
-  gap: clamp(22px, 4vw, 40px);
-  align-items: center;
+  min-height: clamp(420px, 58vw, 640px);
+  align-items: end;
+  overflow: hidden;
+  padding: clamp(56px, 8vw, 104px) clamp(20px, 5vw, 72px);
+  background-color: #f7e9df;
+  background-image: url("/images/marriage-agencies-hero-desktop.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.page-card--intro-with-visual > div {
-  min-width: 0;
+.agencies-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(255, 250, 244, 0.86), rgba(255, 250, 244, 0.5) 48%, rgba(255, 250, 244, 0.12));
 }
 
-.page-card--intro-with-visual h1 {
-  max-width: 620px;
-  font-size: clamp(2rem, 4.2vw, 3.4rem);
-  line-height: 1.22;
+.agencies-hero__content {
+  position: relative;
+  z-index: 2;
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: clamp(24px, 4vw, 34px);
+  border: 1px solid rgba(201, 135, 122, 0.16);
+  border-radius: var(--radius-large);
+  background: rgba(255, 250, 244, 0.72);
+  box-shadow: 0 18px 42px rgba(103, 74, 58, 0.12);
+  backdrop-filter: blur(6px);
+}
+
+.agencies-hero__content h1 {
+  max-width: 720px;
+  margin-bottom: 18px;
+  font-size: clamp(2rem, 4.6vw, 4rem);
+  line-height: 1.2;
   overflow-wrap: anywhere;
   word-break: normal;
 }
@@ -837,41 +861,34 @@ p {
   display: block;
 }
 
-.agencies-hero-media {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  min-height: 0;
-  height: clamp(200px, 24vw, 300px);
-  border-radius: var(--radius-medium);
-  background-color: #f7e9df;
-  background-image: url("/images/marriage-agencies-hero-desktop.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: 0 18px 42px rgba(103, 74, 58, 0.14);
+.agencies-hero__content p:not(.eyebrow) {
+  max-width: 720px;
+  margin-bottom: 0;
+  font-size: clamp(1rem, 2vw, 1.14rem);
 }
 
-.agencies-hero-media::after {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(255, 250, 244, 0.06), rgba(255, 250, 244, 0.22));
-  content: "";
-  pointer-events: none;
+.agencies-content-shell {
+  padding-top: clamp(40px, 6vw, 72px);
 }
 
 @media (max-width: 780px) {
-  .page-card--intro-with-visual {
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
-
-  .page-card--intro-with-visual h1 {
-    font-size: clamp(1.85rem, 8vw, 2.8rem);
-  }
-
-  .agencies-hero-media {
-    height: clamp(176px, 56vw, 260px);
+  .agencies-hero {
+    min-height: clamp(460px, 126vw, 620px);
+    padding: 64px 16px 48px;
     background-image: url("/images/marriage-agencies-hero-mobile.png");
+    background-position: center;
+  }
+
+  .agencies-hero__overlay {
+    background: linear-gradient(180deg, rgba(255, 250, 244, 0.86), rgba(255, 250, 244, 0.48));
+  }
+
+  .agencies-hero__content {
+    padding: 22px;
+    border-radius: var(--radius-medium);
+  }
+
+  .agencies-hero__content h1 {
+    font-size: clamp(1.8rem, 8.2vw, 2.8rem);
   }
 }

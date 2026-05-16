@@ -1,11 +1,37 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import {
   type DiagnosisTypeId,
   diagnosisQuestions,
   getDiagnosisResult,
 } from "@/lib/marriageDiagnosis";
+
+type NextActionLink = {
+  href: string;
+  label: string;
+};
+
+function getNextActionLink(title: string): NextActionLink | null {
+  if (title.startsWith("婚活記事")) {
+    return { href: "/articles", label: "ページを見る" };
+  }
+
+  if (title.startsWith("結婚相談所比較")) {
+    return { href: "/marriage-agencies", label: "詳しく見る" };
+  }
+
+  if (title.startsWith("婚活アプリ比較")) {
+    return { href: "/marriage-apps", label: "詳しく見る" };
+  }
+
+  return null;
+}
+
+function getNextActionTitle(title: string) {
+  return title.replace(" 準備中", "");
+}
 
 export function MarriageDiagnosisClient() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -82,13 +108,36 @@ export function MarriageDiagnosisClient() {
             </p>
           </div>
           <div className="diagnosis-next-actions__grid">
-            {result.actionCards.map((card) => (
-              <article className="diagnosis-next-action-card" key={card.title}>
-                <span>準備中</span>
-                <h4>{card.title}</h4>
-                <p>{card.description}</p>
-              </article>
-            ))}
+            {result.actionCards.map((card) => {
+              const link = getNextActionLink(card.title);
+              const title = getNextActionTitle(card.title);
+              const cardContent = (
+                <>
+                  <span>{link ? link.label : "準備中"}</span>
+                  <h4>{title}</h4>
+                  <p>{card.description}</p>
+                </>
+              );
+
+              if (link) {
+                return (
+                  <Link
+                    className="diagnosis-next-action-card diagnosis-next-action-card--link"
+                    href={link.href}
+                    key={card.title}
+                    aria-label={`${title}のページを見る`}
+                  >
+                    {cardContent}
+                  </Link>
+                );
+              }
+
+              return (
+                <article className="diagnosis-next-action-card" key={card.title}>
+                  {cardContent}
+                </article>
+              );
+            })}
           </div>
         </section>
         <p className="note">

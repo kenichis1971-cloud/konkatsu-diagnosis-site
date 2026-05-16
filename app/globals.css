@@ -520,6 +520,19 @@ p {
   background: #fff2eb;
 }
 
+.diagnosis-return-link__button {
+  border: 1px solid rgba(157, 93, 81, 0.08);
+  background: var(--color-accent-dark);
+  color: #fffaf4;
+  box-shadow: 0 12px 24px rgba(157, 93, 81, 0.22);
+}
+
+.diagnosis-return-link__button:hover,
+.diagnosis-return-link__button:focus-visible {
+  background: #82493f;
+  color: #fff;
+}
+
 .diagnosis-result-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

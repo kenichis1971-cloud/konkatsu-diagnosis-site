@@ -34,7 +34,7 @@ export function DiagnosisReturnLink({ searchParams }: DiagnosisReturnLinkProps) 
 
   return (
     <div className="diagnosis-return-link" aria-label="診断結果への戻り導線">
-      <Link className="diagnosis-button diagnosis-button--subtle" href={`/diagnosis?result=${result}`}>
+      <Link className="diagnosis-button diagnosis-return-link__button" href={`/diagnosis?result=${result}`}>
         先ほどの診断結果に戻る
       </Link>
     </div>

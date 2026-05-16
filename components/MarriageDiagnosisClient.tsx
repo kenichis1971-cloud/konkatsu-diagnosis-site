@@ -1,21 +1,58 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import {
   type DiagnosisTypeId,
   diagnosisQuestions,
   getDiagnosisResult,
+  getDiagnosisResultByType,
 } from "@/lib/marriageDiagnosis";
 
-export function MarriageDiagnosisClient() {
+type NextActionLink = {
+  href: string;
+  label: string;
+};
+
+function getNextActionLink(title: string): NextActionLink | null {
+  if (title.startsWith("婚活記事")) {
+    return { href: "/articles", label: "ページを見る" };
+  }
+
+  if (title.startsWith("結婚相談所比較")) {
+    return { href: "/marriage-agencies", label: "詳しく見る" };
+  }
+
+  if (title.startsWith("婚活アプリ比較")) {
+    return { href: "/marriage-apps", label: "詳しく見る" };
+  }
+
+  return null;
+}
+
+function getNextActionTitle(title: string) {
+  return title.replace(" 準備中", "");
+}
+
+type MarriageDiagnosisClientProps = {
+  initialResultId?: DiagnosisTypeId;
+};
+
+export function MarriageDiagnosisClient({ initialResultId }: MarriageDiagnosisClientProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<DiagnosisTypeId[]>([]);
+  const [queryResultId, setQueryResultId] = useState<DiagnosisTypeId | null>(initialResultId ?? null);
   const isComplete = answers.length === diagnosisQuestions.length;
+  const isResultVisible = isComplete || queryResultId !== null;
   const currentQuestion = diagnosisQuestions[currentIndex];
-  const result = useMemo(() => getDiagnosisResult(answers), [answers]);
+  const result = useMemo(
+    () => (queryResultId ? getDiagnosisResultByType(queryResultId) : getDiagnosisResult(answers)),
+    [answers, queryResultId],
+  );
   const progressValue = isComplete ? 100 : Math.round((currentIndex / diagnosisQuestions.length) * 100);
 
   const handleAnswer = (answer: DiagnosisTypeId) => {
+    setQueryResultId(null);
     const nextAnswers = [...answers.slice(0, currentIndex), answer];
     setAnswers(nextAnswers);
 
@@ -25,6 +62,13 @@ export function MarriageDiagnosisClient() {
   };
 
   const handleBack = () => {
+    if (queryResultId) {
+      setQueryResultId(null);
+      setCurrentIndex(0);
+      setAnswers([]);
+      return;
+    }
+
     if (isComplete) {
       setCurrentIndex(diagnosisQuestions.length - 1);
       setAnswers((currentAnswers) => currentAnswers.slice(0, -1));
@@ -37,11 +81,12 @@ export function MarriageDiagnosisClient() {
   };
 
   const handleRestart = () => {
+    setQueryResultId(null);
     setCurrentIndex(0);
     setAnswers([]);
   };
 
-  if (isComplete) {
+  if (isResultVisible) {
     return (
       <div className="diagnosis-card diagnosis-card--result" aria-live="polite">
         <div className="diagnosis-result-header">
@@ -82,13 +127,36 @@ export function MarriageDiagnosisClient() {
             </p>
           </div>
           <div className="diagnosis-next-actions__grid">
-            {result.actionCards.map((card) => (
-              <article className="diagnosis-next-action-card" key={card.title}>
-                <span>準備中</span>
-                <h4>{card.title}</h4>
-                <p>{card.description}</p>
-              </article>
-            ))}
+            {result.actionCards.map((card) => {
+              const link = getNextActionLink(card.title);
+              const title = getNextActionTitle(card.title);
+              const cardContent = (
+                <>
+                  <span>{link ? link.label : "準備中"}</span>
+                  <h4>{title}</h4>
+                  <p>{card.description}</p>
+                </>
+              );
+
+              if (link) {
+                return (
+                  <Link
+                    className="diagnosis-next-action-card diagnosis-next-action-card--link"
+                    href={`${link.href}?from=diagnosis&result=${result.id}`}
+                    key={card.title}
+                    aria-label={`${title}のページを見る`}
+                  >
+                    {cardContent}
+                  </Link>
+                );
+              }
+
+              return (
+                <article className="diagnosis-next-action-card" key={card.title}>
+                  {cardContent}
+                </article>
+              );
+            })}
           </div>
         </section>
         <p className="note">

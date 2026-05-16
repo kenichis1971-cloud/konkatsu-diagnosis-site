@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { DiagnosisReturnLink, type DiagnosisReturnSearchParams } from "@/components/DiagnosisReturnLink";
 
 export const metadata = {
   title: "婚活アプリ比較の準備ページ",
@@ -47,7 +48,13 @@ const differenceItems = [
   },
 ];
 
-export default function MarriageAppsPage() {
+type MarriageAppsPageProps = {
+  searchParams?: Promise<DiagnosisReturnSearchParams>;
+};
+
+export default async function MarriageAppsPage({ searchParams }: MarriageAppsPageProps) {
+  const params = (await searchParams) ?? {};
+
   return (
     <main>
       <section className="apps-hero" aria-labelledby="apps-title">
@@ -142,6 +149,7 @@ export default function MarriageAppsPage() {
               10問診断で整理する
             </Link>
           </section>
+          <DiagnosisReturnLink searchParams={params} />
         </section>
       </div>
     </main>

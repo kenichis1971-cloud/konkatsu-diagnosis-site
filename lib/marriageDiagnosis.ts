@@ -47,6 +47,10 @@ export const tieBreakPriority: DiagnosisTypeId[] = [
   "speed",
 ];
 
+export function isDiagnosisTypeId(value: unknown): value is DiagnosisTypeId {
+  return typeof value === "string" && diagnosisTypeIds.includes(value as DiagnosisTypeId);
+}
+
 export const diagnosisQuestions: DiagnosisQuestion[] = [
   {
     id: "q1",
@@ -248,6 +252,10 @@ export const diagnosisResults: Record<DiagnosisTypeId, DiagnosisResult> = {
     ],
   },
 };
+
+export function getDiagnosisResultByType(type: DiagnosisTypeId): DiagnosisResult {
+  return diagnosisResults[type];
+}
 
 export function getDiagnosisResult(answers: DiagnosisTypeId[]): DiagnosisResult {
   const scores = Object.fromEntries(diagnosisTypeIds.map((id) => [id, 0])) as Record<DiagnosisTypeId, number>;

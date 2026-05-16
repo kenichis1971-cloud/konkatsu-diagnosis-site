@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { DiagnosisReturnLink, type DiagnosisReturnSearchParams } from "@/components/DiagnosisReturnLink";
 
 export const metadata = {
   title: "結婚相談所比較の準備ページ",
@@ -36,7 +37,13 @@ const checkItems = [
   "仕事や生活リズムに合わせて続けやすい進め方か",
 ];
 
-export default function MarriageAgenciesPage() {
+type MarriageAgenciesPageProps = {
+  searchParams?: Promise<DiagnosisReturnSearchParams>;
+};
+
+export default async function MarriageAgenciesPage({ searchParams }: MarriageAgenciesPageProps) {
+  const params = (await searchParams) ?? {};
+
   return (
     <main>
       <section className="agencies-hero" aria-labelledby="agencies-title">
@@ -114,6 +121,7 @@ export default function MarriageAgenciesPage() {
               10問診断で整理する
             </Link>
           </section>
+          <DiagnosisReturnLink searchParams={params} />
         </section>
       </div>
     </main>

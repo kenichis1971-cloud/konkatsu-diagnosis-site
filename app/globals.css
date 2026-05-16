@@ -477,6 +477,16 @@ p {
   align-items: center;
 }
 
+.diagnosis-return-link {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 18px;
+}
+
+.diagnosis-return-link .diagnosis-button {
+  min-height: 44px;
+}
+
 .diagnosis-button {
   display: inline-flex;
   align-items: center;
@@ -508,6 +518,19 @@ p {
 .diagnosis-button--subtle:hover,
 .diagnosis-button--subtle:focus-visible {
   background: #fff2eb;
+}
+
+.diagnosis-return-link__button {
+  border: 1px solid rgba(157, 93, 81, 0.08);
+  background: var(--color-accent-dark);
+  color: #fffaf4;
+  box-shadow: 0 12px 24px rgba(157, 93, 81, 0.22);
+}
+
+.diagnosis-return-link__button:hover,
+.diagnosis-return-link__button:focus-visible {
+  background: #82493f;
+  color: #fff;
 }
 
 .diagnosis-result-grid {
@@ -561,11 +584,27 @@ p {
 }
 
 .diagnosis-next-action-card {
+  display: block;
   padding: 18px;
   border: 1px solid rgba(157, 93, 81, 0.24);
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.98);
   box-shadow: 0 14px 30px rgba(103, 74, 58, 0.11);
+}
+
+.diagnosis-next-action-card--link {
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.diagnosis-next-action-card--link:hover,
+.diagnosis-next-action-card--link:focus-visible {
+  border-color: rgba(157, 93, 81, 0.58);
+  box-shadow: 0 18px 34px rgba(103, 74, 58, 0.16);
+  outline: none;
+  transform: translateY(-2px);
 }
 
 .diagnosis-next-action-card h4 {

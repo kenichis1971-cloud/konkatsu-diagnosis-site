@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { DiagnosisReturnLink, type DiagnosisReturnSearchParams } from "@/components/DiagnosisReturnLink";
 import { createPageMetadata } from "@/lib/seo";
 
@@ -10,16 +11,42 @@ export const metadata = createPageMetadata({
 
 const articleCards = [
   {
-    title: "婚活で大切にしたい価値観を整理する",
-    body: "出会い方を選ぶ前に、安心できる距離感や将来像を言葉にしておくと、判断に迷いにくくなります。",
+    status: "準備中",
+    title: "婚活を始める前に整理したいこと",
+    body: "いきなりサービスを選ぶ前に、結婚に向けて大切にしたい希望・不安・活動に使える時間をやさしく言葉にするテーマです。診断結果と合わせて読むことで、今の自分に合いそうな進め方を見つめやすくします。",
+    suitableFor: "婚活を始めたいけれど、何から考えればよいか迷っている人に向いています。",
+    relatedLinks: [{ href: "/diagnosis", label: "10問診断で気持ちを整理する" }],
   },
   {
-    title: "自分に合うペースを見つける",
-    body: "焦って行動量だけを増やすのではなく、続けやすい頻度や休み方を決めておくことも大切です。",
+    status: "近日追加予定",
+    title: "結婚相談所を比較するときの見方",
+    body: "サポートの受けやすさ、費用の考え方、活動ペース、担当者への相談しやすさなど、比較前に見ておきたい観点を整理する予定です。",
+    suitableFor: "相談しながら進める婚活が気になり、比べる基準を先に持っておきたい人に向いています。",
+    relatedLinks: [{ href: "/marriage-agencies", label: "結婚相談所比較の準備ページへ" }],
   },
   {
-    title: "出会いの選択肢を比べる前に",
-    body: "婚活サービスや紹介の形を比べるときは、目的・安全性・サポートの有無を落ち着いて確認しましょう。",
+    status: "近日追加予定",
+    title: "婚活アプリを使う前に考えたいこと",
+    body: "真剣度の受け止め方、使いやすさ、費用感、プロフィール確認、メッセージの距離感など、始める前に落ち着いて確認したいポイントをまとめる予定です。",
+    suitableFor: "自分のペースで進めたい一方で、安全面や続けやすさも気になる人に向いています。",
+    relatedLinks: [{ href: "/marriage-apps", label: "婚活アプリ比較の準備ページへ" }],
+  },
+  {
+    status: "準備中",
+    title: "自分の結婚観を見直すヒント",
+    body: "年齢や条件だけで判断するのではなく、生活観・価値観・安心できる関係性を見直しながら、自分にとって大切な軸を整理するテーマです。",
+    suitableFor: "相手に求める条件と、これからの暮らしで大切にしたいことを分けて考えたい人に向いています。",
+    relatedLinks: [{ href: "/fortune", label: "結婚観を見つめる占い鑑定ページへ" }],
+  },
+  {
+    status: "準備中",
+    title: "婚活で疲れたときの気持ちの整え方",
+    body: "思うように進まない時期に、無理に結論を急がず少し立ち止まるための考え方を扱う予定です。不安をあおらず、気持ちと行動量の整え方をやわらかくまとめます。",
+    suitableFor: "婚活の情報量や予定に疲れを感じ、いったん自分の気持ちを確認したい人に向いています。",
+    relatedLinks: [
+      { href: "/diagnosis", label: "診断で今の状態を見直す" },
+      { href: "/fortune", label: "占い鑑定ページも見る" },
+    ],
   },
 ];
 
@@ -54,10 +81,28 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
           <div className="card-grid">
             {articleCards.map((article) => (
               <article className="text-card" key={article.title}>
+                <p className="eyebrow">{article.status}</p>
                 <h3>{article.title}</h3>
                 <p>{article.body}</p>
+                <h4>こんな人に向いています</h4>
+                <p>{article.suitableFor}</p>
+                <h4>関連ページ</h4>
+                {article.relatedLinks.map((link) => (
+                  <p key={link.href + link.label}>
+                    <Link className="article-card-link" href={link.href}>
+                      {link.label}
+                    </Link>
+                  </p>
+                ))}
               </article>
             ))}
+          </div>
+          <div className="text-card text-card--large articles-note">
+            <h3>診断結果と合わせて読むと整理しやすいテーマです</h3>
+            <p>
+              各コラムは、婚活を急がせるためではなく、自分の希望や不安を落ち着いて整理するための読みものとして準備しています。
+              診断結果を見たあとに気になるテーマから確認すると、次に考えたいことを見つけやすくなります。
+            </p>
           </div>
           <DiagnosisReturnLink searchParams={params} />
         </div>

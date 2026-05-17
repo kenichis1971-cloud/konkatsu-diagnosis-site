@@ -1336,22 +1336,23 @@ p {
 .fortune-hero {
   position: relative;
   display: grid;
-  min-height: clamp(420px, 46vw, 620px);
+  min-height: clamp(430px, 46vw, 620px);
   align-items: center;
   overflow: hidden;
-  padding: clamp(64px, 8vw, 112px) clamp(20px, 5vw, 72px);
-  background:
-    radial-gradient(circle at 18% 24%, rgba(255, 225, 215, 0.88), transparent 34%),
-    radial-gradient(circle at 82% 18%, rgba(244, 210, 223, 0.72), transparent 30%),
-    linear-gradient(135deg, #fffaf4 0%, #f8eee7 48%, #fff4ed 100%);
+  padding: clamp(60px, 7vw, 96px) clamp(20px, 5vw, 72px);
+  background-color: #f7e9df;
+  background-image: url("/images/fortune-hero-desktop.png");
+  background-position: center 48%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .fortune-hero::before {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(255, 250, 244, 0.92), rgba(255, 250, 244, 0.5) 58%, rgba(255, 250, 244, 0.28)),
-    repeating-linear-gradient(135deg, rgba(201, 135, 122, 0.08) 0 1px, transparent 1px 18px);
+    linear-gradient(90deg, rgba(255, 250, 244, 0.84), rgba(255, 250, 244, 0.5) 45%, rgba(255, 250, 244, 0.08) 72%),
+    linear-gradient(180deg, rgba(255, 250, 244, 0.12), rgba(103, 74, 58, 0.08));
   content: "";
 }
 
@@ -1360,8 +1361,9 @@ p {
   z-index: 1;
   width: min(1120px, 100%);
   margin: 0 auto;
-  padding: clamp(24px, 4vw, 48px) clamp(12px, 2.5vw, 36px);
-  text-shadow: 0 2px 18px rgba(255, 250, 244, 0.82);
+  padding: clamp(24px, 4vw, 44px) clamp(12px, 2.5vw, 36px);
+  transform: translateY(clamp(-22px, -1.8vw, -12px));
+  text-shadow: 0 2px 18px rgba(255, 250, 244, 0.82), 0 1px 8px rgba(103, 74, 58, 0.14);
 }
 
 .fortune-hero__content h1 {
@@ -1529,18 +1531,21 @@ p {
 
 @media (max-width: 780px) {
   .fortune-hero {
-    min-height: clamp(460px, 118vw, 620px);
-    padding: 64px 16px 52px;
+    min-height: clamp(460px, 116vw, 620px);
+    padding: 64px 16px 48px;
+    background-image: url("/images/fortune-hero-mobile.png");
+    background-position: center 46%;
   }
 
   .fortune-hero::before {
     background:
-      linear-gradient(180deg, rgba(255, 250, 244, 0.82), rgba(255, 250, 244, 0.58)),
-      repeating-linear-gradient(135deg, rgba(201, 135, 122, 0.08) 0 1px, transparent 1px 18px);
+      linear-gradient(180deg, rgba(255, 250, 244, 0.7), rgba(255, 250, 244, 0.36) 58%, rgba(255, 250, 244, 0.5)),
+      linear-gradient(90deg, rgba(255, 250, 244, 0.76), rgba(255, 250, 244, 0.14));
   }
 
   .fortune-hero__content {
     padding: 24px 10px 0;
+    transform: translateY(-8px);
   }
 
   .fortune-hero__content h1 {

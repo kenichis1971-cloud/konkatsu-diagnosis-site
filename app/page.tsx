@@ -16,6 +16,27 @@ const features = [
   },
 ];
 
+const internalLinks = [
+  {
+    title: "婚活コラム",
+    body: "婚活を始める前に、考え方や選択肢を整理するためのコラムです。",
+    href: "/articles",
+    label: "婚活の考え方を整理する",
+  },
+  {
+    title: "結婚相談所比較",
+    body: "サポート・費用・進め方を比べる前に、自分に合う基準を整理します。",
+    href: "/marriage-agencies",
+    label: "相談所を選ぶ前に整理する",
+  },
+  {
+    title: "婚活アプリ比較",
+    body: "婚活アプリを選ぶ前に、真剣度・使いやすさ・費用感を整理します。",
+    href: "/marriage-apps",
+    label: "アプリを選ぶ前に整理する",
+  },
+];
+
 export default function Home() {
   return (
     <main>
@@ -47,6 +68,30 @@ export default function Home() {
               自分に合う婚活スタイルを見てみる
             </Link>
             <p>所要時間の目安は数分です。気軽に今の考えを整理できます。</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section--internal-links" aria-labelledby="internal-links-title">
+        <div className="section__inner">
+          <div className="internal-links__header">
+            <p className="eyebrow">Next Options</p>
+            <h2 id="internal-links-title">診断のあとに、選択肢をもう少し整理できます</h2>
+            <p>
+              診断だけで終わらず、婚活の考え方やサービス選びの基準を落ち着いて確認できるページを用意しています。
+              今の状況に合わせて、気になるテーマから見てみてください。
+            </p>
+          </div>
+          <div className="internal-link-grid">
+            {internalLinks.map((item) => (
+              <Link className="internal-link-card" href={item.href} key={item.href}>
+                <article>
+                  <h3>{item.title}</h3>
+                  <p>{item.body}</p>
+                  <span>{item.label}</span>
+                </article>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

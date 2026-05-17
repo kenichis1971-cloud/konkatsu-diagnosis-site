@@ -62,28 +62,9 @@ export function MarriageDiagnosisClient({ initialResultId }: MarriageDiagnosisCl
   };
 
   const handleBack = () => {
-    if (queryResultId) {
-      setQueryResultId(null);
-      setCurrentIndex(0);
-      setAnswers([]);
-      return;
-    }
-
-    if (isComplete) {
-      setCurrentIndex(diagnosisQuestions.length - 1);
-      setAnswers((currentAnswers) => currentAnswers.slice(0, -1));
-      return;
-    }
-
     if (currentIndex > 0) {
       setCurrentIndex((index) => index - 1);
     }
-  };
-
-  const handleRestart = () => {
-    setQueryResultId(null);
-    setCurrentIndex(0);
-    setAnswers([]);
   };
 
   if (isResultVisible) {
@@ -164,12 +145,9 @@ export function MarriageDiagnosisClient({ initialResultId }: MarriageDiagnosisCl
           不安をあおるものではなく、今の気持ちを言葉にするための参考としてご利用ください。
         </p>
         <div className="diagnosis-actions">
-          <button className="diagnosis-button diagnosis-button--subtle" type="button" onClick={handleBack}>
-            戻る
-          </button>
-          <button className="diagnosis-button" type="button" onClick={handleRestart}>
+          <Link className="diagnosis-button" href="/diagnosis">
             もう一度、今の気持ちで診断する
-          </button>
+          </Link>
         </div>
       </div>
     );

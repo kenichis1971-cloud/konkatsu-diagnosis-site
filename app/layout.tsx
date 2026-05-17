@@ -42,11 +42,17 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
             婚活スタイル診断
           </Link>
           <nav className="site-nav" aria-label="メインナビゲーション">
-            {navigation.map((item) => (
-              <Link key={item.href} href={item.href}>
-                {item.label}
-              </Link>
-            ))}
+            {navigation.map((item) =>
+              item.href === "/diagnosis" ? (
+                <a key={item.href} href={item.href}>
+                  {item.label}
+                </a>
+              ) : (
+                <Link key={item.href} href={item.href}>
+                  {item.label}
+                </Link>
+              ),
+            )}
           </nav>
         </header>
         {children}

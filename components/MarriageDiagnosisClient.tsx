@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
 import {
   type DiagnosisTypeId,
@@ -27,6 +28,10 @@ function getNextActionLink(title: string): NextActionLink | null {
     return { href: "/marriage-apps", label: "詳しく見る" };
   }
 
+  if (title.startsWith("占い鑑定")) {
+    return { href: "/fortune", label: "詳しく見る" };
+  }
+
   return null;
 }
 
@@ -39,6 +44,7 @@ type MarriageDiagnosisClientProps = {
 };
 
 export function MarriageDiagnosisClient({ initialResultId }: MarriageDiagnosisClientProps) {
+  const router = useRouter();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<DiagnosisTypeId[]>([]);
   const [queryResultId, setQueryResultId] = useState<DiagnosisTypeId | null>(initialResultId ?? null);
@@ -65,6 +71,13 @@ export function MarriageDiagnosisClient({ initialResultId }: MarriageDiagnosisCl
     if (currentIndex > 0) {
       setCurrentIndex((index) => index - 1);
     }
+  };
+
+  const handleRestart = () => {
+    setCurrentIndex(0);
+    setAnswers([]);
+    setQueryResultId(null);
+    router.replace("/diagnosis");
   };
 
   if (isResultVisible) {
@@ -145,9 +158,9 @@ export function MarriageDiagnosisClient({ initialResultId }: MarriageDiagnosisCl
           不安をあおるものではなく、今の気持ちを言葉にするための参考としてご利用ください。
         </p>
         <div className="diagnosis-actions">
-          <Link className="diagnosis-button" href="/diagnosis">
+          <button className="diagnosis-button" type="button" onClick={handleRestart}>
             もう一度、今の気持ちで診断する
-          </Link>
+          </button>
         </div>
       </div>
     );

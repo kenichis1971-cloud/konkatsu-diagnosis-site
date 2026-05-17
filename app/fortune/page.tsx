@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { DiagnosisReturnLink, type DiagnosisReturnSearchParams } from "@/components/DiagnosisReturnLink";
 
 export const metadata: Metadata = {
   title: "婚活占い・結婚観整理の準備ページ",
@@ -57,7 +58,13 @@ const preparationSteps = [
   "鑑定受付が始まったときに見直せるよう、今の状況を簡単に残しておく",
 ];
 
-export default function FortunePage() {
+type FortunePageProps = {
+  searchParams?: Promise<DiagnosisReturnSearchParams>;
+};
+
+export default async function FortunePage({ searchParams }: FortunePageProps) {
+  const params = (await searchParams) ?? {};
+
   return (
     <main>
       <section className="fortune-hero" aria-labelledby="fortune-title">
@@ -152,6 +159,7 @@ export default function FortunePage() {
               10問診断へ戻る
             </Link>
           </section>
+          <DiagnosisReturnLink searchParams={params} />
         </section>
       </div>
     </main>

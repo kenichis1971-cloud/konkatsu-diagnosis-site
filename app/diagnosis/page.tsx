@@ -37,7 +37,7 @@ export default async function DiagnosisPage({ searchParams }: DiagnosisPageProps
       />
       <section className="section section--soft">
         <div className="section__inner diagnosis-frame">
-          <MarriageDiagnosisClient initialResultId={initialResultId} />
+          <MarriageDiagnosisClient key={initialResultId ?? "new-diagnosis"} initialResultId={initialResultId} />
         </div>
       </section>
     </main>

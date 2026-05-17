@@ -1194,6 +1194,52 @@ p {
   padding: clamp(22px, 4vw, 28px);
 }
 
+.apps-card__details {
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(255, 247, 241, 0.82);
+}
+
+.apps-card__details h4 {
+  margin: 0;
+  color: var(--color-accent-dark);
+  font-size: 0.95rem;
+}
+
+.apps-card__details ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.apps-card__details li {
+  position: relative;
+  padding-left: 24px;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+.apps-card__details li::before {
+  position: absolute;
+  top: 0.72em;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  content: "";
+}
+
+.apps-card__memo {
+  padding-top: 2px;
+  font-size: 0.94rem;
+}
+
 .apps-checklist,
 .apps-difference,
 .apps-next-step {

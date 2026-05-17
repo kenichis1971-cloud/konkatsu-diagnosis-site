@@ -865,12 +865,64 @@ p {
 
 .agencies-card {
   display: grid;
-  gap: 12px;
+  gap: 14px;
   padding: clamp(22px, 4vw, 28px);
 }
 
 .agencies-card h3 {
   margin-bottom: 0;
+}
+
+.agencies-card__section {
+  display: grid;
+  gap: 8px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(255, 247, 241, 0.78);
+}
+
+.agencies-card__section--soft {
+  background: rgba(247, 222, 214, 0.34);
+}
+
+.agencies-card__section h4 {
+  margin: 0;
+  color: var(--color-accent-dark);
+  font-size: 0.92rem;
+}
+
+.agencies-card__section ul {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.agencies-card__section li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--color-muted);
+  font-size: 0.94rem;
+  line-height: 1.7;
+}
+
+.agencies-card__section li::before {
+  position: absolute;
+  top: 0.72em;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  content: "";
+}
+
+.agencies-card__memo {
+  padding-top: 2px;
+  color: var(--color-muted);
+  font-size: 0.92rem;
+  line-height: 1.75;
 }
 
 .agencies-checklist,

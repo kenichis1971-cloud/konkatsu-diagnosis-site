@@ -165,6 +165,7 @@ export const diagnosisResults: Record<DiagnosisTypeId, DiagnosisResult> = {
       { title: "結婚相談所比較 準備中", description: "相談しながら相手選びの軸を整理したい方向けに、比較ポイントを準備しています。" },
       { title: "婚活記事 準備中", description: "慎重に進めるときの見極め方や、会話で確認したい観点をまとめる予定です。" },
       { title: "占い鑑定 準備中", description: "気持ちを言葉にするきっかけとして使える、参考コンテンツを準備しています。" },
+      { title: "婚活アプリ比較 準備中", description: "自分のペースで確認しやすい出会い方を比べるための観点を整理する予定です。" },
     ],
   },
   speed: {
@@ -177,6 +178,7 @@ export const diagnosisResults: Record<DiagnosisTypeId, DiagnosisResult> = {
       { title: "結婚相談所比較 準備中", description: "期限やサポート体制を見ながら、進め方を比べるための情報を準備しています。" },
       { title: "婚活アプリ比較 準備中", description: "短い時間でも候補を確認しやすいサービス選びの観点を整理する予定です。" },
       { title: "婚活記事 準備中", description: "無理のない活動量や振り返り方を考える記事を追加予定です。" },
+      { title: "占い鑑定 準備中", description: "急ぎたい気持ちを落ち着いて整理するための参考コンテンツを準備しています。" },
     ],
   },
   natural: {
@@ -189,6 +191,7 @@ export const diagnosisResults: Record<DiagnosisTypeId, DiagnosisResult> = {
       { title: "婚活アプリ比較 準備中", description: "自然に会話を始めやすい入口を探すための比較情報を準備しています。" },
       { title: "婚活記事 準備中", description: "日常の延長で結婚観を話すタイミングや工夫をまとめる予定です。" },
       { title: "占い鑑定 準備中", description: "自分のペースを見直す補助として使えるコンテンツを準備しています。" },
+      { title: "結婚相談所比較 準備中", description: "自然体を大切にしながら相談できるサポートの観点を整理する予定です。" },
     ],
   },
   condition: {
@@ -201,6 +204,7 @@ export const diagnosisResults: Record<DiagnosisTypeId, DiagnosisResult> = {
       { title: "結婚相談所比較 準備中", description: "条件やサポート内容を比べながら、優先順位を整理する情報を準備しています。" },
       { title: "婚活アプリ比較 準備中", description: "検索条件や使い方の違いを確認するための比較情報を追加予定です。" },
       { title: "婚活記事 準備中", description: "希望条件の分け方や見直し方をまとめる記事を準備しています。" },
+      { title: "占い鑑定 準備中", description: "条件だけでは整理しきれない気持ちを見直す参考コンテンツを準備しています。" },
     ],
   },
   confidence: {
@@ -213,6 +217,7 @@ export const diagnosisResults: Record<DiagnosisTypeId, DiagnosisResult> = {
       { title: "婚活記事 準備中", description: "自分の強みやプロフィールの伝え方を整理する記事を準備しています。" },
       { title: "占い鑑定 準備中", description: "不安や迷いを言葉にするための参考コンテンツを追加予定です。" },
       { title: "婚活アプリ比較 準備中", description: "小さく試せる出会い方を検討するための比較情報を準備しています。" },
+      { title: "結婚相談所比較 準備中", description: "自分の強みや希望を相談しながら整理するための観点を準備しています。" },
     ],
   },
   action: {
@@ -225,6 +230,7 @@ export const diagnosisResults: Record<DiagnosisTypeId, DiagnosisResult> = {
       { title: "婚活アプリ比較 準備中", description: "まず試しやすい一歩を選ぶために、使い方や比較軸を準備しています。" },
       { title: "婚活記事 準備中", description: "15分でできる準備や、行動を続けやすくするヒントをまとめる予定です。" },
       { title: "結婚相談所比較 準備中", description: "一人で進めにくいときの相談先を整理する情報を準備しています。" },
+      { title: "占い鑑定 準備中", description: "最初の一歩を考える前に気持ちを整える参考コンテンツを準備しています。" },
     ],
   },
   restart: {
@@ -237,6 +243,7 @@ export const diagnosisResults: Record<DiagnosisTypeId, DiagnosisResult> = {
       { title: "婚活記事 準備中", description: "再開前に整理したいことや、負担を抑えた進め方をまとめる予定です。" },
       { title: "占い鑑定 準備中", description: "過去の経験とこれからの希望を切り分ける参考コンテンツを準備しています。" },
       { title: "結婚相談所比較 準備中", description: "ブランクがある場合のサポート体制を比べる情報を準備しています。" },
+      { title: "婚活アプリ比較 準備中", description: "久しぶりの活動でも試しやすい出会い方を比べる観点を整理する予定です。" },
     ],
   },
   values: {
@@ -249,6 +256,7 @@ export const diagnosisResults: Record<DiagnosisTypeId, DiagnosisResult> = {
       { title: "婚活記事 準備中", description: "結婚観や理想の暮らしを言葉にするワーク記事を準備しています。" },
       { title: "占い鑑定 準備中", description: "気持ちの整理に使える参考コンテンツを追加予定です。" },
       { title: "結婚相談所比較 準備中", description: "相談しながら選択肢を整理したい方向けの比較情報を準備しています。" },
+      { title: "婚活アプリ比較 準備中", description: "価値観を確認しながら使える出会い方を比べる観点を整理する予定です。" },
     ],
   },
 };

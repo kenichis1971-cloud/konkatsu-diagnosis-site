@@ -1,11 +1,14 @@
 import { Hero } from "@/components/Hero";
 import { MarriageDiagnosisClient } from "@/components/MarriageDiagnosisClient";
 import { type DiagnosisTypeId, isDiagnosisTypeId } from "@/lib/marriageDiagnosis";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "あなたに合う婚活スタイル診断",
-  description: "10問の固定ロジックで、婚活への向き合い方や選択肢を整理するための診断ページです。",
-};
+export const metadata = createPageMetadata({
+  title: "10問で婚活スタイルを整理する診断",
+  description:
+    "4択の10問診断で、婚活で大切にしたい価値観や自分に合いそうな出会い方を整理するためのページです。",
+  path: "/diagnosis",
+});
 
 type DiagnosisPageProps = {
   searchParams?: Promise<{

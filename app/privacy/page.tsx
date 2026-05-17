@@ -1,9 +1,11 @@
 import { PageShell } from "@/components/PageShell";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title: "プライバシーポリシー",
-  description: "婚活スタイル診断のプライバシーポリシーです。",
-};
+  description: "婚活診断サイトで取得する情報、利用目的、第三者提供の考え方についてご案内します。",
+  path: "/privacy",
+});
 
 export default function PrivacyPage() {
   return (

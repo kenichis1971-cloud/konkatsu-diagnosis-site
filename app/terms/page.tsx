@@ -1,9 +1,11 @@
 import { PageShell } from "@/components/PageShell";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title: "利用規約・免責事項",
-  description: "婚活スタイル診断の利用規約・免責事項です。",
-};
+  description: "婚活診断サイトの目的、診断コンテンツの扱い、免責事項についてご案内します。",
+  path: "/terms",
+});
 
 export default function TermsPage() {
   return (

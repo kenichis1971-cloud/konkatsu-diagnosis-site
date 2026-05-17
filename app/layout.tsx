@@ -1,24 +1,28 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
+import { defaultDescription, defaultTitle, siteName, siteUrl } from "@/lib/seo";
 import "./globals.css";
-
-const siteName = "婚活スタイル診断";
-const siteDescription =
-  "婚活の迷いや選択肢をやさしく整理する、婚活・結婚向け診断サイトです。";
 
 export const metadata: Metadata = {
   title: {
-    default: "あなたに合う婚活スタイル診断",
-    template: `%s｜${siteName}`,
+    default: defaultTitle,
+    template: `%s | ${siteName}`,
   },
-  description: siteDescription,
-  metadataBase: new URL("https://konkatsu-diagnosis-site.vercel.app"),
+  description: defaultDescription,
+  metadataBase: new URL(siteUrl),
   openGraph: {
-    title: siteName,
-    description: siteDescription,
+    title: defaultTitle,
+    description: defaultDescription,
+    url: siteUrl,
+    siteName,
     type: "website",
     locale: "ja_JP",
+  },
+  twitter: {
+    card: "summary",
+    title: defaultTitle,
+    description: defaultDescription,
   },
 };
 

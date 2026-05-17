@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { DiagnosisReturnLink, type DiagnosisReturnSearchParams } from "@/components/DiagnosisReturnLink";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "婚活アプリ比較の準備ページ",
+export const metadata = createPageMetadata({
+  title: "婚活アプリ比較 | 使う前に整理したいポイント",
   description:
-    "婚活アプリを選ぶ前に、真剣度・使いやすさ・費用・価値観などの比較観点をやさしく整理する準備ページです。",
-};
+    "婚活アプリを使う前に、真剣度・使いやすさ・費用感・価値観の確認方法を落ち着いて整理するページです。",
+  path: "/marriage-apps",
+});
 
 const comparisonCards = [
   {

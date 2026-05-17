@@ -1,12 +1,13 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 import { DiagnosisReturnLink, type DiagnosisReturnSearchParams } from "@/components/DiagnosisReturnLink";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "婚活占い・結婚観整理の準備ページ",
+export const metadata = createPageMetadata({
+  title: "占い鑑定・結婚観整理 | 婚活の迷いを見直す準備ページ",
   description:
-    "婚活診断の結果だけでは整理しきれない気持ちや結婚観を、タロット・西洋占星術・個別相談の観点からやさしく見直すための準備ページです。",
-};
+    "婚活診断だけでは整理しきれない気持ちや結婚観を、占い鑑定や個別相談の観点からやさしく見直す準備ページです。",
+  path: "/fortune",
+});
 
 const fortuneMenus = [
   {

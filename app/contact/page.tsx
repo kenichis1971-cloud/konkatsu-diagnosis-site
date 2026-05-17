@@ -1,9 +1,11 @@
 import { PageShell } from "@/components/PageShell";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title: "お問い合わせ",
-  description: "婚活スタイル診断へのお問い合わせページです。",
-};
+  description: "婚活診断サイトへのご質問やご連絡に関する案内ページです。",
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

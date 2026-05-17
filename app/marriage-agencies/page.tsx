@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { DiagnosisReturnLink, type DiagnosisReturnSearchParams } from "@/components/DiagnosisReturnLink";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "結婚相談所比較の準備ページ",
+export const metadata = createPageMetadata({
+  title: "結婚相談所比較 | 選ぶ前に整理したいポイント",
   description:
-    "結婚相談所を選ぶ前に、サポート・費用・出会いの数・進め方などの比較観点をやさしく整理する準備ページです。",
-};
+    "結婚相談所を選ぶ前に、サポート内容・費用・活動ペース・比較するときの基準をやさしく整理するページです。",
+  path: "/marriage-agencies",
+});
 
 const comparisonPoints = [
   {

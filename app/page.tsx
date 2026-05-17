@@ -1,5 +1,13 @@
 import Link from "next/link";
 import { Hero } from "@/components/Hero";
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata({
+  title: "あなたに合う婚活スタイル診断 | 婚活診断サイト",
+  description:
+    "10問の診断を通して、婚活で大切にしたい価値観や自分に合いそうな進め方をやさしく整理するサイトです。",
+  path: "/",
+});
 
 const features = [
   {

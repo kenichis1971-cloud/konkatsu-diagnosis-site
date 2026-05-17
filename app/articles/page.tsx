@@ -1,9 +1,12 @@
 import { DiagnosisReturnLink, type DiagnosisReturnSearchParams } from "@/components/DiagnosisReturnLink";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "婚活コラム",
-  description: "婚活の考え方や出会い方を、自分らしく整理するためのコラムページです。",
-};
+export const metadata = createPageMetadata({
+  title: "婚活コラム | 婚活の選択肢を整理するヒント",
+  description:
+    "婚活を始める前に、価値観・活動ペース・出会い方の選択肢を落ち着いて整理するためのコラムページです。",
+  path: "/articles",
+});
 
 const articleCards = [
   {

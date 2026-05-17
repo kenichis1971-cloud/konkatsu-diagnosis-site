@@ -1332,3 +1332,229 @@ p {
     width: 100%;
   }
 }
+
+.fortune-hero {
+  position: relative;
+  display: grid;
+  min-height: clamp(420px, 46vw, 620px);
+  align-items: center;
+  overflow: hidden;
+  padding: clamp(64px, 8vw, 112px) clamp(20px, 5vw, 72px);
+  background:
+    radial-gradient(circle at 18% 24%, rgba(255, 225, 215, 0.88), transparent 34%),
+    radial-gradient(circle at 82% 18%, rgba(244, 210, 223, 0.72), transparent 30%),
+    linear-gradient(135deg, #fffaf4 0%, #f8eee7 48%, #fff4ed 100%);
+}
+
+.fortune-hero::before {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255, 250, 244, 0.92), rgba(255, 250, 244, 0.5) 58%, rgba(255, 250, 244, 0.28)),
+    repeating-linear-gradient(135deg, rgba(201, 135, 122, 0.08) 0 1px, transparent 1px 18px);
+  content: "";
+}
+
+.fortune-hero__content {
+  position: relative;
+  z-index: 1;
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: clamp(24px, 4vw, 48px) clamp(12px, 2.5vw, 36px);
+  text-shadow: 0 2px 18px rgba(255, 250, 244, 0.82);
+}
+
+.fortune-hero__content h1 {
+  max-width: 860px;
+  margin-bottom: 18px;
+  font-size: clamp(2rem, 4.4vw, 4rem);
+  line-height: 1.22;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.fortune-title-line {
+  display: block;
+}
+
+.fortune-hero__content p:not(.eyebrow) {
+  max-width: 740px;
+  margin-bottom: 0;
+  font-size: clamp(1rem, 2vw, 1.14rem);
+}
+
+.fortune-content-shell {
+  padding-top: clamp(40px, 6vw, 72px);
+}
+
+.fortune-content {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(255, 248, 243, 0.92));
+}
+
+.fortune-overview,
+.fortune-preparation,
+.fortune-note,
+.fortune-next-step {
+  display: grid;
+  gap: clamp(20px, 4vw, 32px);
+  margin-bottom: clamp(36px, 6vw, 56px);
+}
+
+.fortune-overview {
+  grid-template-columns: minmax(0, 1.12fr) minmax(260px, 0.88fr);
+  align-items: stretch;
+}
+
+.fortune-status-card,
+.fortune-card,
+.fortune-preparation,
+.fortune-note,
+.fortune-next-step {
+  border: 1px solid rgba(201, 135, 122, 0.18);
+  border-radius: var(--radius-medium);
+  background: rgba(255, 253, 250, 0.92);
+  box-shadow: 0 16px 36px rgba(103, 74, 58, 0.09);
+}
+
+.fortune-status-card {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  padding: clamp(22px, 4vw, 30px);
+  background: linear-gradient(135deg, #fff8f2, #f7e7ee);
+}
+
+.fortune-status-card span,
+.fortune-card span {
+  width: fit-content;
+  padding: 6px 12px;
+  border: 1px solid rgba(157, 93, 81, 0.18);
+  border-radius: 999px;
+  background: #f7ded6;
+  color: var(--color-accent-dark);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.fortune-status-card h3,
+.fortune-status-card p,
+.fortune-card h3,
+.fortune-card p,
+.fortune-preparation p,
+.fortune-note p,
+.fortune-next-step p {
+  margin-bottom: 0;
+}
+
+.fortune-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 22px;
+  margin-bottom: clamp(34px, 5vw, 52px);
+}
+
+.fortune-card {
+  display: grid;
+  gap: 12px;
+  padding: clamp(22px, 4vw, 28px);
+}
+
+.fortune-card__details {
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(255, 247, 241, 0.82);
+}
+
+.fortune-card__details h4 {
+  margin: 0;
+  color: var(--color-accent-dark);
+  font-size: 0.95rem;
+}
+
+.fortune-card__details ul,
+.fortune-preparation ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fortune-card__details li,
+.fortune-preparation li {
+  position: relative;
+  padding-left: 28px;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+.fortune-card__details li::before,
+.fortune-preparation li::before {
+  position: absolute;
+  top: 0.72em;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  content: "";
+}
+
+.fortune-preparation,
+.fortune-note,
+.fortune-next-step {
+  padding: clamp(24px, 4vw, 34px);
+}
+
+.fortune-preparation {
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  align-items: start;
+  background: #fff7f1;
+}
+
+.fortune-note {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 247, 241, 0.92));
+}
+
+.fortune-next-step {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+@media (max-width: 780px) {
+  .fortune-hero {
+    min-height: clamp(460px, 118vw, 620px);
+    padding: 64px 16px 52px;
+  }
+
+  .fortune-hero::before {
+    background:
+      linear-gradient(180deg, rgba(255, 250, 244, 0.82), rgba(255, 250, 244, 0.58)),
+      repeating-linear-gradient(135deg, rgba(201, 135, 122, 0.08) 0 1px, transparent 1px 18px);
+  }
+
+  .fortune-hero__content {
+    padding: 24px 10px 0;
+  }
+
+  .fortune-hero__content h1 {
+    font-size: clamp(1.8rem, 8.2vw, 2.8rem);
+  }
+
+  .fortune-overview,
+  .fortune-card-grid,
+  .fortune-preparation,
+  .fortune-next-step {
+    grid-template-columns: 1fr;
+  }
+
+  .fortune-next-step .diagnosis-button {
+    width: 100%;
+  }
+}

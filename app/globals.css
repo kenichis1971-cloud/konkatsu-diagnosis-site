@@ -1336,15 +1336,15 @@ p {
 .fortune-hero {
   position: relative;
   display: grid;
-  min-height: clamp(500px, 50vw, 680px);
+  min-height: clamp(560px, 54vw, 820px);
   align-items: center;
   overflow: hidden;
-  padding: clamp(56px, 6.5vw, 88px) clamp(20px, 5vw, 72px);
+  padding: clamp(52px, 6vw, 80px) clamp(20px, 5vw, 72px);
   background-color: #f7e9df;
   background-image: url("/images/fortune-hero-desktop.png");
   background-position: center 50%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto 100%;
 }
 
 .fortune-hero::before {
@@ -1531,11 +1531,11 @@ p {
 
 @media (max-width: 780px) {
   .fortune-hero {
-    min-height: clamp(520px, 132vw, 640px);
-    padding: 56px 16px 42px;
+    min-height: clamp(560px, 142vw, 700px);
+    padding: 52px 16px 40px;
     background-image: url("/images/fortune-hero-mobile.png");
     background-position: center 50%;
-    background-size: auto 100%;
+    background-size: auto 96%;
   }
 
   .fortune-hero::before {

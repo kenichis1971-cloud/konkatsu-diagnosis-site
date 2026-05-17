@@ -1342,7 +1342,7 @@ p {
   padding: clamp(52px, 6vw, 80px) clamp(20px, 5vw, 72px);
   background-color: #f7e9df;
   background-image: url("/images/fortune-hero-desktop.png");
-  background-position: center 50%;
+  background-position: right 50%;
   background-repeat: no-repeat;
   background-size: auto 100%;
 }

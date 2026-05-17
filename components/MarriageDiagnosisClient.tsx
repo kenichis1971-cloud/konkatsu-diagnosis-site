@@ -27,6 +27,10 @@ function getNextActionLink(title: string): NextActionLink | null {
     return { href: "/marriage-apps", label: "詳しく見る" };
   }
 
+  if (title.startsWith("占い鑑定")) {
+    return { href: "/fortune", label: "詳しく見る" };
+  }
+
   return null;
 }
 

@@ -38,7 +38,6 @@ const navigation = [
   { href: "/privacy", label: "プライバシー" },
   { href: "/terms", label: "利用規約" },
   { href: "/contact", label: "お問い合わせ" },
-  { href: "/advertising", label: "広告・PRについて" },
 ];
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {

@@ -24,6 +24,40 @@ const features = [
   },
 ];
 
+
+const siteOverviewItems = [
+  {
+    title: "10問で婚活スタイルを整理する",
+    body: "4択の質問に答えながら、自分に合う婚活の進め方を考えるきっかけをつくれます。",
+    href: "/diagnosis",
+    label: "診断ページを見る",
+  },
+  {
+    title: "婚活コラムで考え方を整理する",
+    body: "婚活を始める前に、不安や迷いを落ち着いて整理するための読み物です。",
+    href: "/articles",
+    label: "コラムを読む",
+  },
+  {
+    title: "結婚相談所を選ぶ前に比較軸を知る",
+    body: "サポート、費用、活動ペースなどを比べる前に、見るポイントを整理できます。",
+    href: "/marriage-agencies",
+    label: "相談所比較を見る",
+  },
+  {
+    title: "婚活アプリを使う前に確認する",
+    body: "真剣度、使いやすさ、費用感など、自分に合うか考えるための視点をまとめています。",
+    href: "/marriage-apps",
+    label: "アプリ比較を見る",
+  },
+  {
+    title: "占い鑑定で気持ちや結婚観を見直す",
+    body: "タロットや西洋占星術を、自己理解と選択肢整理の補助として活用できます。",
+    href: "/fortune",
+    label: "占い鑑定を見る",
+  },
+];
+
 const internalLinks = [
   {
     title: "婚活コラム",
@@ -76,6 +110,26 @@ export default function Home() {
               自分に合う婚活スタイルを見てみる
             </Link>
             <p>所要時間の目安は数分です。気軽に今の考えを整理できます。</p>
+          </div>
+        </div>
+      </section>
+
+
+      <section className="section" aria-labelledby="site-overview-title">
+        <div className="section__inner">
+          <p className="eyebrow">Site Overview</p>
+          <h2 id="site-overview-title">このサイトでできること</h2>
+          <p className="lead">
+            婚活を始める前に、今の気持ちや選択肢を整理するためのページをまとめています。
+          </p>
+          <div className="card-grid">
+            {siteOverviewItems.map((item) => (
+              <article className="text-card" key={item.href}>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+                <Link href={item.href}>{item.label} →</Link>
+              </article>
+            ))}
           </div>
         </div>
       </section>

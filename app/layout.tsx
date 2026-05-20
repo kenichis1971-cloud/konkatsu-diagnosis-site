@@ -24,6 +24,9 @@ export const metadata: Metadata = {
     title: defaultTitle,
     description: defaultDescription,
   },
+  verification: {
+    google: "Me0ruJV9U6oJJHoxk7hLGJqDRffZZfieF0HsofoInSU",
+  },
 };
 
 const navigation = [

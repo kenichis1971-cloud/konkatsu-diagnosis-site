@@ -66,6 +66,9 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
         <footer className="site-footer">
           <p>© {new Date().getFullYear()} 婚活スタイル診断</p>
           <p>このサイトは、自己理解と選択肢整理を目的とした情報提供サイトです。</p>
+          <p>
+            <Link href="/advertising">広告・PRについて</Link>
+          </p>
         </footer>
       </body>
     </html>

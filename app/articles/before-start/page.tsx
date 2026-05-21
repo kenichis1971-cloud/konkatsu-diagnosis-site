@@ -35,13 +35,15 @@ export default function BeforeStartArticlePage() {
   return (
     <main>
       <div className="page-shell">
-        <article className="page-card content-area" aria-labelledby="before-start-title">
-          <p className="eyebrow">Article</p>
-          <h1 id="before-start-title">婚活を始める前に整理したいこと</h1>
-          <p>
-            婚活を始めるときは、いきなり方法を決める前に、まず自分の状態を整える時間が役立ちます。
-            気持ちや希望、不安を言葉にしておくと、情報の受け取り方がやわらかくなり、次に見るページも選びやすくなります。
-          </p>
+        <article className="page-card content-area before-start-article" aria-labelledby="before-start-title">
+          <header className="before-start-header">
+            <p className="eyebrow">Article</p>
+            <h1 id="before-start-title" className="before-start-title">婚活を始める前に整理したいこと</h1>
+            <p className="before-start-lead">
+              婚活を始めるときは、いきなり方法を決める前に、まず自分の状態を整える時間が役立ちます。
+              気持ちや希望、不安を言葉にしておくと、情報の受け取り方がやわらかくなり、次に見るページも選びやすくなります。
+            </p>
+          </header>
 
           <section aria-labelledby="before-start-intro">
             <h2 id="before-start-intro">1. はじめに</h2>
@@ -51,7 +53,7 @@ export default function BeforeStartArticlePage() {
             </p>
           </section>
 
-          <section aria-labelledby="before-start-five-points">
+          <section aria-labelledby="before-start-five-points" className="before-start-points">
             <h2 id="before-start-five-points">2. まず整理したい5つのこと</h2>
             <div className="card-grid">
               {reflectionPoints.map((point) => (

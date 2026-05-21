@@ -31,11 +31,14 @@ const articleCards = [
     ],
   },
   {
-    status: "近日追加予定",
+    status: "公開中",
     title: "婚活アプリを使う前に考えたいこと",
     body: "真剣度の受け止め方、使いやすさ、費用感、プロフィール確認、メッセージの距離感など、始める前に落ち着いて確認したいポイントをまとめる予定です。",
     suitableFor: "自分のペースで進めたい一方で、安全面や続けやすさも気になる人に向いています。",
-    relatedLinks: [{ href: "/marriage-apps", label: "婚活アプリ比較の準備ページへ" }],
+    relatedLinks: [
+      { href: "/articles/before-using-marriage-apps", label: "この記事を読む" },
+      { href: "/marriage-apps", label: "婚活アプリ比較の準備ページへ" },
+    ],
   },
   {
     status: "準備中",

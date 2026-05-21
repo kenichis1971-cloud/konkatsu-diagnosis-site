@@ -496,12 +496,12 @@ p {
 }
 
 .diagnosis-card--result {
-  gap: 28px;
+  gap: clamp(22px, 3.4vw, 30px);
 }
 
 .diagnosis-result-header {
   display: grid;
-  gap: 10px;
+  gap: 8px;
 }
 
 .diagnosis-result-header h2,
@@ -510,7 +510,8 @@ p {
 }
 
 .diagnosis-result-header p:not(.eyebrow) {
-  max-width: 780px;
+  max-width: 72ch;
+  line-height: 1.8;
 }
 
 .diagnosis-progress {
@@ -643,11 +644,11 @@ p {
 .diagnosis-result-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  gap: 16px;
 }
 
 .diagnosis-result-grid section {
-  padding: 22px;
+  padding: 20px;
   border: 1px solid rgba(157, 93, 81, 0.22);
   border-radius: var(--radius-medium);
   background: rgba(255, 253, 250, 0.9);
@@ -659,7 +660,7 @@ p {
 }
 
 .diagnosis-result-bridge {
-  padding: 18px 20px;
+  padding: 16px 18px;
   border-left: 4px solid rgba(157, 93, 81, 0.42);
   border-radius: 16px;
   background: rgba(255, 242, 235, 0.72);
@@ -672,8 +673,8 @@ p {
 
 .diagnosis-next-actions {
   display: grid;
-  gap: 18px;
-  padding: clamp(22px, 4vw, 30px);
+  gap: 16px;
+  padding: clamp(20px, 3.6vw, 28px);
   border: 1px solid rgba(157, 93, 81, 0.24);
   border-radius: var(--radius-medium);
   background: rgba(255, 253, 250, 0.9);
@@ -686,13 +687,13 @@ p {
 
 .diagnosis-next-actions__grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
 }
 
 .diagnosis-next-action-card {
   display: block;
-  padding: 18px;
+  padding: 16px;
   border: 1px solid rgba(157, 93, 81, 0.24);
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.98);
@@ -716,6 +717,8 @@ p {
 
 .diagnosis-next-action-card h4 {
   color: #3f312d;
+  line-height: 1.5;
+  margin-bottom: 6px;
 }
 
 .diagnosis-next-action-card span {
@@ -732,8 +735,8 @@ p {
 
 .diagnosis-next-action-card p {
   color: #5f4d47;
-  font-size: 0.92rem;
-  line-height: 1.75;
+  font-size: 0.91rem;
+  line-height: 1.7;
 }
 
 @media (max-width: 780px) {
@@ -743,7 +746,7 @@ p {
   }
 
   .diagnosis-card--result {
-    gap: 24px;
+    gap: 20px;
   }
 
   .diagnosis-result-header {
@@ -751,20 +754,21 @@ p {
   }
 
   .diagnosis-result-grid {
-    gap: 14px;
+    gap: 12px;
   }
 
   .diagnosis-result-grid section,
   .diagnosis-next-action-card {
-    padding: 18px;
-  }
-
-  .diagnosis-result-bridge {
     padding: 16px;
   }
 
+  .diagnosis-result-bridge {
+    padding: 14px 15px;
+  }
+
   .diagnosis-next-actions {
-    gap: 16px;
+    gap: 14px;
+    padding: 16px;
   }
 
   .diagnosis-actions,

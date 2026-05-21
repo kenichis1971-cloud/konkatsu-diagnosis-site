@@ -11,11 +11,14 @@ export const metadata = createPageMetadata({
 
 const articleCards = [
   {
-    status: "準備中",
+    status: "公開中",
     title: "婚活を始める前に整理したいこと",
     body: "いきなりサービスを選ぶ前に、結婚に向けて大切にしたい希望・不安・活動に使える時間をやさしく言葉にするテーマです。診断結果と合わせて読むことで、今の自分に合いそうな進め方を見つめやすくします。",
     suitableFor: "婚活を始めたいけれど、何から考えればよいか迷っている人に向いています。",
-    relatedLinks: [{ href: "/diagnosis", label: "10問診断で気持ちを整理する" }],
+    relatedLinks: [
+      { href: "/articles/before-start", label: "この記事を読む" },
+      { href: "/diagnosis", label: "10問診断で気持ちを整理する" },
+    ],
   },
   {
     status: "近日追加予定",

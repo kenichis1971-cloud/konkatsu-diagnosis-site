@@ -88,7 +88,7 @@ export function MarriageDiagnosisClient({ initialResultId }: MarriageDiagnosisCl
           <h2>{result.title}</h2>
           <p>
             この結果は、今の自分を整理し、婚活で見直せそうな選択肢を考えるための参考です。
-            「今の傾向」から順に読み進めると、次に確認したいことが見つけやすくなります。
+            「今の傾向」から順に読むと、次に確認したいポイントを見つけやすくなります。
           </p>
         </div>
         <div className="diagnosis-result-grid">
@@ -116,8 +116,8 @@ export function MarriageDiagnosisClient({ initialResultId }: MarriageDiagnosisCl
             <p className="eyebrow">Next actions</p>
             <h3 id="diagnosis-next-actions-title">次にできること</h3>
             <p>
-              診断結果をもとに、自己理解と選択肢整理に使いやすいコンテンツを準備しています。
-              気になるテーマから確認できるよう、今後順次追加予定です。
+              診断結果をもとに、自己理解と選択肢整理に使いやすい4つの確認先をまとめています。
+              気になるテーマから、今の自分に合う情報を選んで確認してみてください。
             </p>
           </div>
           <div className="diagnosis-next-actions__grid">

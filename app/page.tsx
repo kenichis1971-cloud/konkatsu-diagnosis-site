@@ -12,47 +12,46 @@ export const metadata = createPageMetadata({
 const features = [
   {
     title: "気持ちを言葉にする",
-    body: "婚活で何を大切にしたいのか、今の迷いや不安を落ち着いて見つめるきっかけを用意します。",
+    body: "婚活で大切にしたいことや、今の迷いを落ち着いて見つめるきっかけを用意します。",
   },
   {
     title: "選択肢を整理する",
-    body: "いろいろな婚活方法を比べる前に、自分に合いそうな進め方を考えるための土台を作ります。",
+    body: "いろいろな婚活方法を比べる前に、自分に合いそうな進め方を考える土台をつくります。",
   },
   {
     title: "無理なく一歩進む",
-    body: "焦りをあおるのではなく、自分のペースで次の行動を考えやすくすることを大切にします。",
+    body: "焦らずに、自分のペースで次の行動を考えやすくすることを大切にします。",
   },
 ];
-
 
 const siteOverviewItems = [
   {
     title: "10問で婚活スタイルを整理する",
-    body: "4択の質問に答えながら、自分に合う婚活の進め方を考えるきっかけをつくれます。",
+    body: "4択で答えながら、自分に合う進め方を考えるきっかけをつくれます。",
     href: "/diagnosis",
     label: "診断ページを見る",
   },
   {
     title: "婚活コラムで考え方を整理する",
-    body: "婚活を始める前に、不安や迷いを落ち着いて整理するための読み物です。",
+    body: "始める前の不安や迷いを、落ち着いて整理するための読み物です。",
     href: "/articles",
     label: "コラムを読む",
   },
   {
-    title: "結婚相談所を選ぶ前に比較軸を知る",
-    body: "サポート、費用、活動ペースなどを比べる前に、見るポイントを整理できます。",
+    title: "結婚相談所の比較軸を知る",
+    body: "サポートや費用など、比べるときに見たいポイントを整理できます。",
     href: "/marriage-agencies",
     label: "相談所比較を見る",
   },
   {
-    title: "婚活アプリを使う前に確認する",
-    body: "真剣度、使いやすさ、費用感など、自分に合うか考えるための視点をまとめています。",
+    title: "婚活アプリ選びの視点を確認する",
+    body: "真剣度や費用感など、自分に合うか考えるための視点をまとめています。",
     href: "/marriage-apps",
     label: "アプリ比較を見る",
   },
   {
-    title: "占い鑑定で気持ちや結婚観を見直す",
-    body: "タロットや西洋占星術を、自己理解と選択肢整理の補助として活用できます。",
+    title: "占い鑑定で気持ちを見直す",
+    body: "タロットや西洋占星術を、自己理解の補助として活用できます。",
     href: "/fortune",
     label: "占い鑑定を見る",
   },
@@ -61,21 +60,21 @@ const siteOverviewItems = [
 const internalLinks = [
   {
     title: "婚活コラム",
-    body: "婚活を始める前に、考え方や選択肢を整理するためのコラムです。",
+    body: "婚活前に、考え方や選択肢を整理するためのコラムです。",
     href: "/articles",
-    label: "婚活の考え方を整理する",
+    label: "考え方を整理する",
   },
   {
     title: "結婚相談所比較",
-    body: "サポート・費用・進め方を比べる前に、自分に合う基準を整理します。",
+    body: "サポートや費用を比べる前に、自分に合う基準を整えます。",
     href: "/marriage-agencies",
-    label: "相談所を選ぶ前に整理する",
+    label: "比較ポイントを見る",
   },
   {
     title: "婚活アプリ比較",
-    body: "婚活アプリを選ぶ前に、真剣度・使いやすさ・費用感を整理します。",
+    body: "真剣度・使いやすさ・費用感を、選ぶ前に落ち着いて確認できます。",
     href: "/marriage-apps",
-    label: "アプリを選ぶ前に整理する",
+    label: "選ぶ前に確認する",
   },
 ];
 
@@ -100,10 +99,7 @@ export default function Home() {
           <div className="diagnosis-cta-card__content">
             <p className="eyebrow">10 Questions</p>
             <h2 id="diagnosis-cta-title">10問で婚活スタイルを整理してみませんか</h2>
-            <p>
-              4択の質問に答えながら、自分に合いそうな出会い方や進め方を見つめる診断です。
-              診断結果は、自己理解と選択肢整理の参考として使えます。
-            </p>
+            <p>4択の質問に答えながら、自分に合いそうな進め方を見つめる診断です。</p>
           </div>
           <div className="diagnosis-cta-card__action">
             <Link className="button button--large" href="/diagnosis">
@@ -114,15 +110,12 @@ export default function Home() {
         </div>
       </section>
 
-
-      <section className="section" aria-labelledby="site-overview-title">
+      <section className="section section--site-overview" aria-labelledby="site-overview-title">
         <div className="section__inner">
           <p className="eyebrow">Site Overview</p>
           <h2 id="site-overview-title">このサイトでできること</h2>
-          <p className="lead">
-            婚活を始める前に、今の気持ちや選択肢を整理するためのページをまとめています。
-          </p>
-          <div className="card-grid">
+          <p className="lead">診断を入口に、婚活の考え方と選択肢を少しずつ整理できます。</p>
+          <div className="card-grid card-grid--compact">
             {siteOverviewItems.map((item) => (
               <article className="text-card" key={item.href}>
                 <h3>{item.title}</h3>
@@ -138,11 +131,8 @@ export default function Home() {
         <div className="section__inner">
           <div className="internal-links__header">
             <p className="eyebrow">Next Options</p>
-            <h2 id="internal-links-title">診断のあとに、選択肢をもう少し整理できます</h2>
-            <p>
-              診断だけで終わらず、婚活の考え方やサービス選びの基準を落ち着いて確認できるページを用意しています。
-              今の状況に合わせて、気になるテーマから見てみてください。
-            </p>
+            <h2 id="internal-links-title">診断のあとに、気になるテーマを深められます</h2>
+            <p>コラムや比較ページで、次に考えたいことを自然に確認できます。</p>
           </div>
           <div className="internal-link-grid">
             {internalLinks.map((item) => (
@@ -158,7 +148,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section section--soft" aria-labelledby="about-title">
+      <section className="section section--soft section--about" aria-labelledby="about-title">
         <div className="section__inner two-column">
           <div>
             <p className="eyebrow">About</p>
@@ -167,17 +157,17 @@ export default function Home() {
           <div className="text-card">
             <p>
               婚活には、出会い方・進め方・距離感など、たくさんの選択肢があります。
-              このサイトでは、特定のサービスをすすめるのではなく、あなた自身の希望や不安を整理する補助として診断コンテンツを提供していきます。
+              このサイトでは、特定のサービスをすすめるのではなく、希望や不安を整理する補助として診断コンテンツを提供しています。
             </p>
           </div>
         </div>
       </section>
 
-      <section className="section" aria-labelledby="features-title">
+      <section className="section section--features" aria-labelledby="features-title">
         <div className="section__inner">
           <p className="eyebrow">Features</p>
           <h2 id="features-title">安心して使える設計を目指します</h2>
-          <div className="card-grid">
+          <div className="card-grid card-grid--compact">
             {features.map((feature) => (
               <article className="text-card" key={feature.title}>
                 <h3>{feature.title}</h3>

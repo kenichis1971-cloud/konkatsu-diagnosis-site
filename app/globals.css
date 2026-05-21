@@ -224,6 +224,23 @@ p {
   background: linear-gradient(180deg, #fff7f1 0%, #fffaf4 100%);
 }
 
+.section--site-overview {
+  padding-bottom: clamp(44px, 6vw, 72px);
+}
+
+.section--internal-links {
+  padding-top: clamp(44px, 6vw, 72px);
+}
+
+.section--about {
+  padding-top: clamp(48px, 6vw, 76px);
+  padding-bottom: clamp(48px, 6vw, 80px);
+}
+
+.section--features {
+  padding-top: clamp(48px, 6vw, 80px);
+}
+
 .internal-links__header {
   max-width: 780px;
 }
@@ -248,7 +265,7 @@ p {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  padding: clamp(24px, 4vw, 34px);
+  padding: clamp(20px, 3.4vw, 28px);
   border: 1px solid rgba(201, 135, 122, 0.18);
   border-radius: var(--radius-medium);
   background: rgba(255, 255, 255, 0.92);
@@ -277,7 +294,7 @@ p {
 }
 
 .internal-link-card p {
-  margin-bottom: 22px;
+  margin-bottom: 16px;
 }
 
 .internal-link-card span {
@@ -332,7 +349,11 @@ p {
 .text-card,
 .page-card,
 .step-card {
-  padding: clamp(24px, 4vw, 36px);
+  padding: clamp(22px, 3.4vw, 32px);
+}
+
+.card-grid--compact .text-card {
+  padding: clamp(20px, 3.2vw, 28px);
 }
 
 .text-card--large {
@@ -441,6 +462,16 @@ p {
   .card-grid,
   .internal-link-grid {
     grid-template-columns: 1fr;
+  }
+
+  .card-grid,
+  .internal-link-grid {
+    gap: 16px;
+  }
+
+  .card-grid--compact .text-card,
+  .internal-link-card article {
+    padding: 18px;
   }
 
   .diagnosis-cta-card {

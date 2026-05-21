@@ -947,6 +947,41 @@ p {
   overflow-wrap: anywhere;
 }
 
+.before-using-apps-article {
+  --before-using-apps-title-size: clamp(1.64rem, 3.1vw, 2.22rem);
+}
+
+.before-using-apps-header {
+  margin-bottom: clamp(18px, 3.6vw, 30px);
+}
+
+.before-using-apps-title {
+  max-width: min(22ch, 100%);
+  margin: 0;
+  font-size: var(--before-using-apps-title-size);
+  line-height: 1.34;
+  letter-spacing: 0.01em;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  text-wrap: pretty;
+}
+
+.before-using-apps-lead {
+  max-width: 62ch;
+  margin-top: 14px;
+  margin-bottom: 0;
+  font-size: clamp(0.98rem, 1.5vw, 1.08rem);
+  line-height: 1.78;
+}
+
+.before-using-apps-points .card-grid {
+  margin-bottom: clamp(44px, 7vw, 64px);
+}
+
+.before-using-apps-points .text-card {
+  padding: clamp(16px, 2.5vw, 24px);
+}
+
 @media (max-width: 780px) {
   .before-start-shell {
     margin-top: 14px;
@@ -990,6 +1025,22 @@ p {
 
   .before-start-points .card-grid {
     margin-bottom: 34px;
+  }
+
+  .before-using-apps-title {
+    max-width: 100%;
+    font-size: clamp(1.42rem, 6.1vw, 1.78rem);
+    line-height: 1.4;
+    text-wrap: balance;
+  }
+
+  .before-using-apps-lead {
+    font-size: clamp(0.94rem, 3.6vw, 1rem);
+    line-height: 1.72;
+  }
+
+  .before-using-apps-points .card-grid {
+    margin-bottom: 40px;
   }
 }
 

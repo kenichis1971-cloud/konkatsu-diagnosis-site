@@ -21,11 +21,14 @@ const articleCards = [
     ],
   },
   {
-    status: "近日追加予定",
+    status: "公開中",
     title: "結婚相談所を比較するときの見方",
-    body: "サポートの受けやすさ、費用の考え方、活動ペース、担当者への相談しやすさなど、比較前に見ておきたい観点を整理する予定です。",
+    body: "結婚相談所を比較するときに、サポート内容・費用・活動ペース・相談しやすさ・紹介の仕組みを落ち着いて整理するためのコラムです。",
     suitableFor: "相談しながら進める婚活が気になり、比べる基準を先に持っておきたい人に向いています。",
-    relatedLinks: [{ href: "/marriage-agencies", label: "結婚相談所比較の準備ページへ" }],
+    relatedLinks: [
+      { href: "/articles/compare-marriage-agencies", label: "この記事を読む" },
+      { href: "/marriage-agencies", label: "結婚相談所比較の準備ページへ" },
+    ],
   },
   {
     status: "近日追加予定",

@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/diagnosis",
     "/articles",
     "/articles/before-start",
+    "/articles/compare-marriage-agencies",
     "/marriage-agencies",
     "/marriage-apps",
     "/fortune",

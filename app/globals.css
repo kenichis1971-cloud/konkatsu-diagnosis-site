@@ -858,12 +858,13 @@ p {
   overflow: hidden;
   margin-bottom: clamp(28px, 5vw, 40px);
   padding: clamp(22px, 4vw, 34px);
-  border: 1px solid rgba(201, 135, 122, 0.2);
+  min-height: clamp(220px, 34vw, 290px);
+  border: 1px solid rgba(201, 135, 122, 0.16);
   border-radius: var(--radius-medium);
-  background-image: linear-gradient(100deg, rgba(255, 250, 244, 0.94), rgba(255, 250, 244, 0.78) 46%, rgba(255, 250, 244, 0.24) 70%),
+  background-image: linear-gradient(100deg, rgba(255, 250, 244, 0.95), rgba(255, 250, 244, 0.8) 44%, rgba(255, 250, 244, 0.22) 70%),
     url("/images/articles-before-start-hero-desktop.png");
   background-size: cover;
-  background-position: center;
+  background-position: left center;
   background-repeat: no-repeat;
 }
 
@@ -905,9 +906,10 @@ p {
   .before-start-header {
     margin-bottom: 28px;
     padding: 20px 16px;
-    background-image: linear-gradient(180deg, rgba(255, 250, 244, 0.95), rgba(255, 250, 244, 0.82) 58%, rgba(255, 250, 244, 0.42)),
+    min-height: clamp(220px, 70vw, 310px);
+    background-image: linear-gradient(180deg, rgba(255, 250, 244, 0.96), rgba(255, 250, 244, 0.84) 56%, rgba(255, 250, 244, 0.4)),
       url("/images/articles-before-start-hero-mobile.png");
-    background-position: center;
+    background-position: center 30%;
   }
 
   .before-start-title {

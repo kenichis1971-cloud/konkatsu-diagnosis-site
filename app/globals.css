@@ -881,7 +881,9 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 46%;
+  object-position: 78% center;
+  transform: scale(1.02);
+  transform-origin: right center;
 }
 
 .before-start-hero__overlay {
@@ -955,12 +957,17 @@ p {
     padding: 48px 16px 34px;
   }
 
+  .before-start-hero__image {
+    object-position: 76% center;
+    transform: scale(1.03);
+  }
+
   .before-start-hero__overlay {
     background: linear-gradient(
       180deg,
-      rgba(255, 250, 243, 0.8) 0%,
-      rgba(255, 250, 243, 0.6) 48%,
-      rgba(255, 250, 243, 0.24) 72%,
+      rgba(255, 250, 243, 0.82) 0%,
+      rgba(255, 250, 243, 0.62) 48%,
+      rgba(255, 250, 243, 0.26) 72%,
       rgba(255, 250, 243, 0.12) 100%
     );
   }

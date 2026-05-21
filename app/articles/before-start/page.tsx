@@ -34,17 +34,30 @@ const reflectionPoints = [
 export default function BeforeStartArticlePage() {
   return (
     <main>
-      <div className="page-shell">
-        <article className="page-card content-area before-start-article" aria-labelledby="before-start-title">
-          <header className="before-start-header">
-            <p className="eyebrow">Article</p>
-            <h1 id="before-start-title" className="before-start-title">婚活を始める前に整理したいこと</h1>
-            <p className="before-start-lead">
-              婚活を始めるときは、いきなり方法を決める前に、まず自分の状態を整える時間が役立ちます。
-              気持ちや希望、不安を言葉にしておくと、情報の受け取り方がやわらかくなり、次に見るページも選びやすくなります。
-            </p>
-          </header>
+      <section className="before-start-hero" aria-labelledby="before-start-title">
+        <picture className="before-start-hero__picture">
+          <source media="(max-width: 780px)" srcSet="/images/articles-before-start-hero-mobile.png" />
+          <img
+            className="before-start-hero__image"
+            src="/images/articles-before-start-hero-desktop.png"
+            alt=""
+            loading="eager"
+            decoding="async"
+          />
+        </picture>
+        <div className="before-start-hero__overlay" aria-hidden="true" />
+        <div className="before-start-hero__content page-shell">
+          <p className="eyebrow">Article</p>
+          <h1 id="before-start-title" className="before-start-title">婚活を始める前に整理したいこと</h1>
+          <p className="before-start-lead">
+            婚活を始めるときは、いきなり方法を決める前に、まず自分の状態を整える時間が役立ちます。
+            気持ちや希望、不安を言葉にしておくと、情報の受け取り方がやわらかくなり、次に見るページも選びやすくなります。
+          </p>
+        </div>
+      </section>
 
+      <div className="page-shell">
+        <article className="content-area before-start-article">
           <section aria-labelledby="before-start-intro">
             <h2 id="before-start-intro">1. はじめに</h2>
             <p>

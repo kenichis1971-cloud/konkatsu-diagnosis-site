@@ -19,18 +19,31 @@ const preparationPoints = [
 export default function BeforeUsingMarriageAppsArticlePage() {
   return (
     <main>
-      <section className="section section--soft" aria-labelledby="before-using-marriage-apps-title">
-        <div className="section__inner">
-          <article className="page-card content-area before-start-article before-using-apps-article" aria-labelledby="before-using-marriage-apps-title">
-            <header className="app-article-header marriage-apps-article-header before-using-apps-header">
-              <p className="eyebrow">Article</p>
-              <h1 id="before-using-marriage-apps-title" className="before-using-apps-title">
-                婚活アプリを使う前に
-                <br />
-                考えたいこと
-              </h1>
-              <p className="before-using-apps-lead">婚活アプリは手軽に始めやすい一方で、使う前に目的やペースを整理しておくと、気持ちが整いやすくなります。いきなり比較に入るより、まず自分が何を重視したいかを言葉にしてみましょう。</p>
-            </header>
+      <section className="before-using-apps-hero" aria-labelledby="before-using-marriage-apps-title">
+        <picture className="before-using-apps-hero__picture">
+          <source media="(max-width: 780px)" srcSet="/images/articles-before-using-marriage-apps-hero-mobile.png" />
+          <img
+            className="before-using-apps-hero__image"
+            src="/images/articles-before-using-marriage-apps-hero-desktop.png"
+            alt=""
+            loading="eager"
+            decoding="async"
+          />
+        </picture>
+        <div className="before-using-apps-hero__overlay" aria-hidden="true" />
+        <div className="before-using-apps-hero__content">
+          <p className="eyebrow">Article</p>
+          <h1 id="before-using-marriage-apps-title" className="before-using-apps-title">
+            婚活アプリを使う前に
+            <br />
+            考えたいこと
+          </h1>
+          <p className="before-using-apps-lead">婚活アプリは手軽に始めやすい一方で、使う前に目的やペースを整理しておくと、気持ちが整いやすくなります。いきなり比較に入るより、まず自分が何を重視したいかを言葉にしてみましょう。</p>
+        </div>
+      </section>
+
+      <div className="page-shell before-start-shell">
+        <article className="page-card content-area before-start-article before-using-apps-article" aria-labelledby="before-using-marriage-apps-title">
 
             <section aria-labelledby="before-using-marriage-apps-intro">
               <h2 id="before-using-marriage-apps-intro">1. はじめに</h2>
@@ -66,8 +79,7 @@ export default function BeforeUsingMarriageAppsArticlePage() {
               <p>アプリを選ぶ前に、自分の使い方や優先順位を先に言葉にしておくことが大切です。比較の前に軸を持っておくことで、情報の受け取り方がやわらかくなり、次の一歩を落ち着いて考えやすくなります。</p>
             </section>
           </article>
-        </div>
-      </section>
+      </div>
     </main>
   );
 }

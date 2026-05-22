@@ -22,14 +22,26 @@ export default function BeforeUsingMarriageAppsArticlePage() {
       <section className="section section--soft" aria-labelledby="before-using-marriage-apps-title">
         <div className="section__inner">
           <article className="page-card content-area before-start-article before-using-apps-article" aria-labelledby="before-using-marriage-apps-title">
-            <header className="app-article-header marriage-apps-article-header before-using-apps-header">
-              <p className="eyebrow">Article</p>
-              <h1 id="before-using-marriage-apps-title" className="before-using-apps-title">
-                婚活アプリを使う前に
-                <br />
-                考えたいこと
-              </h1>
-              <p className="before-using-apps-lead">婚活アプリは手軽に始めやすい一方で、使う前に目的やペースを整理しておくと、気持ちが整いやすくなります。いきなり比較に入るより、まず自分が何を重視したいかを言葉にしてみましょう。</p>
+            <header className="app-article-header marriage-apps-article-header before-using-apps-header before-using-apps-hero">
+              <picture className="before-using-apps-hero__picture">
+                <source media="(max-width: 780px)" srcSet="/images/articles-before-using-marriage-apps-hero-mobile.png" />
+                <img
+                  className="before-using-apps-hero__image"
+                  src="/images/articles-before-using-marriage-apps-hero-desktop.png"
+                  alt=""
+                  loading="eager"
+                  decoding="async"
+                />
+              </picture>
+              <div className="before-using-apps-hero__content">
+                <p className="eyebrow">Article</p>
+                <h1 id="before-using-marriage-apps-title" className="before-using-apps-title">
+                  婚活アプリを使う前に
+                  <br />
+                  考えたいこと
+                </h1>
+                <p className="before-using-apps-lead">婚活アプリは手軽に始めやすい一方で、使う前に目的やペースを整理しておくと、気持ちが整いやすくなります。いきなり比較に入るより、まず自分が何を重視したいかを言葉にしてみましょう。</p>
+              </div>
             </header>
 
             <section aria-labelledby="before-using-marriage-apps-intro">

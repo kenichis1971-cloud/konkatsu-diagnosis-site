@@ -37,7 +37,11 @@ export default function CompareMarriageAgenciesArticlePage() {
       <section className="review-values-hero" aria-labelledby="compare-marriage-agencies-title">
         <div className="review-values-hero__content">
           <p className="eyebrow">Article</p>
-          <h1 id="compare-marriage-agencies-title" className="review-values-title">結婚相談所を比較するときの見方</h1>
+          <h1 id="compare-marriage-agencies-title" className="review-values-title">
+            結婚相談所を
+            <br />
+            比較するときの見方
+          </h1>
           <p className="review-values-lead">
             結婚相談所を比較するときは、先にサービス名を並べるよりも、まず比較軸を整理しておくと落ち着いて判断しやすくなります。
             このページでは、比較前に確認しておきたい視点をやわらかくまとめます。

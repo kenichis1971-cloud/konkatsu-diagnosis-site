@@ -41,11 +41,15 @@ const articleCards = [
     ],
   },
   {
-    status: "準備中",
-    title: "自分の結婚観を見直すヒント",
-    body: "年齢や条件だけで判断するのではなく、生活観・価値観・安心できる関係性を見直しながら、自分にとって大切な軸を整理するテーマです。",
+    status: "公開中",
+    title: "結婚観を見直したいときに考えること",
+    body: "条件や理想だけでなく、生活・価値観・安心感・将来の過ごし方を整理しながら、今の自分に合う結婚観を見つめるためのコラムです。",
     suitableFor: "相手に求める条件と、これからの暮らしで大切にしたいことを分けて考えたい人に向いています。",
-    relatedLinks: [{ href: "/fortune", label: "結婚観を見つめる占い鑑定ページへ" }],
+    relatedLinks: [
+      { href: "/articles/review-marriage-values", label: "この記事を読む" },
+      { href: "/diagnosis", label: "10問診断で大切にしたい軸を整理する" },
+      { href: "/fortune", label: "占い鑑定ページも見る" },
+    ],
   },
   {
     status: "準備中",

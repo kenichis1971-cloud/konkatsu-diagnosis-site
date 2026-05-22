@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/articles/compare-marriage-agencies",
     "/articles/before-using-marriage-apps",
     "/articles/review-marriage-values",
+    "/articles/when-marriage-activities-feel-tiring",
     "/marriage-agencies",
     "/marriage-apps",
     "/fortune",

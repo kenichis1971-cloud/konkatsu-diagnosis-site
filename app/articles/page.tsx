@@ -52,11 +52,12 @@ const articleCards = [
     ],
   },
   {
-    status: "準備中",
+    status: "公開中",
     title: "婚活で疲れたときの気持ちの整え方",
     body: "思うように進まない時期に、無理に結論を急がず少し立ち止まるための考え方を扱う予定です。不安をあおらず、気持ちと行動量の整え方をやわらかくまとめます。",
     suitableFor: "婚活の情報量や予定に疲れを感じ、いったん自分の気持ちを確認したい人に向いています。",
     relatedLinks: [
+      { href: "/articles/when-marriage-activities-feel-tiring", label: "この記事を読む" },
       { href: "/diagnosis", label: "診断で今の状態を見直す" },
       { href: "/fortune", label: "占い鑑定ページも見る" },
     ],

@@ -21,10 +21,10 @@ export default function BeforeUsingMarriageAppsArticlePage() {
     <main>
       <section className="before-using-apps-hero" aria-labelledby="before-using-marriage-apps-title">
         <picture className="before-using-apps-hero__picture">
-          <source media="(max-width: 780px)" srcSet="/images/articles-hero-mobile.jpg" />
+          <source media="(max-width: 780px)" srcSet="/images/articles-before-using-marriage-apps-hero-mobile.png" />
           <img
             className="before-using-apps-hero__image"
-            src="/images/articles-hero-desktop.jpg"
+            src="/images/articles-before-using-marriage-apps-hero-desktop.png"
             alt=""
             loading="eager"
             decoding="async"

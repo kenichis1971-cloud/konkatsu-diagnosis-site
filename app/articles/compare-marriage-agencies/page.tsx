@@ -34,7 +34,11 @@ const comparisonPoints = [
 export default function CompareMarriageAgenciesArticlePage() {
   return (
     <main>
-      <section className="review-values-hero" aria-labelledby="compare-marriage-agencies-title">
+      <section className="review-values-hero compare-marriage-hero" aria-labelledby="compare-marriage-agencies-title">
+        <picture className="compare-marriage-hero__image">
+          <source media="(max-width: 780px)" srcSet="/images/articles-compare-marriage-agencies-hero-mobile.png" />
+          <img src="/images/articles-compare-marriage-agencies-hero-desktop.png" alt="" />
+        </picture>
         <div className="review-values-hero__content">
           <p className="eyebrow">Article</p>
           <h1 id="compare-marriage-agencies-title" className="review-values-title">

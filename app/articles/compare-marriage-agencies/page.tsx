@@ -39,7 +39,7 @@ export default function CompareMarriageAgenciesArticlePage() {
           <source media="(max-width: 780px)" srcSet="/images/articles-compare-marriage-agencies-hero-mobile.png" />
           <img src="/images/articles-compare-marriage-agencies-hero-desktop.png" alt="" />
         </picture>
-        <div className="review-values-hero__content">
+        <div className="review-values-hero__content compare-marriage-hero__content">
           <p className="eyebrow">Article</p>
           <h1 id="compare-marriage-agencies-title" className="review-values-title">
             結婚相談所を

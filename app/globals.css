@@ -900,7 +900,7 @@ p {
 }
 
 .before-start-shell {
-  margin-top: clamp(4px, 1.2vw, 10px);
+  margin-top: clamp(2px, 0.8vw, 8px);
 }
 
 .before-start-hero {
@@ -1101,7 +1101,7 @@ p {
   }
 
   .before-start-shell {
-    margin-top: 8px;
+    margin-top: 4px;
   }
 
   .before-start-hero {
@@ -1939,15 +1939,15 @@ p {
 }
 
 .review-values-shell {
-  margin-top: clamp(4px, 1.2vw, 10px);
+  margin-top: clamp(2px, 0.8vw, 8px);
 }
 
 .review-values-hero {
   position: relative;
   display: grid;
-  min-height: clamp(320px, 40vw, 470px);
+  min-height: clamp(360px, 46vw, 560px);
   align-items: center;
-  padding: clamp(42px, 6vw, 74px) clamp(20px, 5vw, 72px) clamp(68px, 8vw, 116px);
+  padding: clamp(42px, 6vw, 74px) clamp(20px, 5vw, 72px) clamp(88px, 10vw, 152px);
   background: linear-gradient(135deg, #fff7f1 0%, #f7ece4 55%, #f3e6dd 100%);
 }
 
@@ -1978,10 +1978,11 @@ p {
   object-position: 84% center;
 }
 
-.compare-marriage-hero .review-values-hero__content {
+.compare-marriage-hero__content {
   position: relative;
   z-index: 2;
-  margin-left: clamp(44px, 8vw, 132px);
+  margin-left: clamp(72px, 11vw, 180px);
+  max-width: min(58ch, calc(100% - clamp(72px, 11vw, 180px)));
 }
 .review-values-hero__content {
   width: min(1120px, 100%);
@@ -2029,12 +2030,12 @@ p {
 
 @media (max-width: 780px) {
   .review-values-shell {
-    margin-top: 8px;
+    margin-top: 4px;
   }
 
   .review-values-hero {
-    min-height: clamp(280px, 82vw, 390px);
-    padding: 40px 16px 52px;
+    min-height: clamp(310px, 90vw, 430px);
+    padding: 40px 16px 58px;
   }
 
   .compare-marriage-hero::before {
@@ -2045,8 +2046,9 @@ p {
     object-position: 72% center;
   }
 
-  .compare-marriage-hero .review-values-hero__content {
-    margin-left: clamp(6px, 2.5vw, 16px);
+  .compare-marriage-hero__content {
+    margin-left: clamp(8px, 3vw, 18px);
+    max-width: min(62ch, 100%);
   }
 
   .review-values-title {

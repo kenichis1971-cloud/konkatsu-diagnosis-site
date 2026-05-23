@@ -900,7 +900,7 @@ p {
 }
 
 .before-start-shell {
-  margin-top: clamp(20px, 4vw, 32px);
+  margin-top: clamp(10px, 2.2vw, 18px);
 }
 
 .before-start-hero {
@@ -1101,7 +1101,7 @@ p {
   }
 
   .before-start-shell {
-    margin-top: 14px;
+    margin-top: 12px;
   }
 
   .before-start-hero {
@@ -1939,15 +1939,15 @@ p {
 }
 
 .review-values-shell {
-  margin-top: clamp(20px, 4vw, 32px);
+  margin-top: clamp(10px, 2.2vw, 18px);
 }
 
 .review-values-hero {
   position: relative;
   display: grid;
-  min-height: clamp(220px, 28vw, 320px);
+  min-height: clamp(250px, 32vw, 372px);
   align-items: center;
-  padding: clamp(36px, 5.5vw, 64px) clamp(20px, 5vw, 72px) clamp(24px, 4vw, 38px);
+  padding: clamp(36px, 5.5vw, 64px) clamp(20px, 5vw, 72px) clamp(36px, 4.8vw, 56px);
   background: linear-gradient(135deg, #fff7f1 0%, #f7ece4 55%, #f3e6dd 100%);
 }
 
@@ -1981,7 +1981,7 @@ p {
 .compare-marriage-hero .review-values-hero__content {
   position: relative;
   z-index: 2;
-  margin-left: 0;
+  margin-left: clamp(12px, 2.5vw, 34px);
 }
 .review-values-hero__content {
   width: min(1120px, 100%);
@@ -2029,12 +2029,12 @@ p {
 
 @media (max-width: 780px) {
   .review-values-shell {
-    margin-top: 14px;
+    margin-top: 12px;
   }
 
   .review-values-hero {
-    min-height: clamp(220px, 64vw, 290px);
-    padding: 42px 16px 28px;
+    min-height: clamp(246px, 70vw, 334px);
+    padding: 42px 16px 34px;
   }
 
   .compare-marriage-hero::before {
@@ -2043,6 +2043,10 @@ p {
 
   .compare-marriage-hero__image img {
     object-position: 68% center;
+  }
+
+  .compare-marriage-hero .review-values-hero__content {
+    margin-left: clamp(2px, 1.2vw, 10px);
   }
 
   .review-values-title {

@@ -34,8 +34,12 @@ const comparisonPoints = [
 export default function CompareMarriageAgenciesArticlePage() {
   return (
     <main>
-      <section className="review-values-hero" aria-labelledby="compare-marriage-agencies-title">
-        <div className="review-values-hero__content">
+      <section className="review-values-hero compare-marriage-hero" aria-labelledby="compare-marriage-agencies-title">
+        <picture className="compare-marriage-hero__image">
+          <source media="(max-width: 780px)" srcSet="/images/articles-compare-marriage-agencies-hero-mobile.png" />
+          <img src="/images/articles-compare-marriage-agencies-hero-desktop.png" alt="" />
+        </picture>
+        <div className="review-values-hero__content compare-marriage-hero__content">
           <p className="eyebrow">Article</p>
           <h1 id="compare-marriage-agencies-title" className="review-values-title">
             結婚相談所を
@@ -49,8 +53,8 @@ export default function CompareMarriageAgenciesArticlePage() {
         </div>
       </section>
 
-      <div className="page-shell review-values-shell">
-        <article className="page-card content-area review-values-article" aria-labelledby="compare-marriage-agencies-title">
+      <div className="page-shell review-values-shell compare-marriage-shell">
+        <article className="page-card content-area review-values-article compare-marriage-article" aria-labelledby="compare-marriage-agencies-title">
           <section aria-labelledby="compare-marriage-agencies-intro">
               <h2 id="compare-marriage-agencies-intro">1. はじめに</h2>
               <p>

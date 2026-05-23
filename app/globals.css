@@ -900,7 +900,7 @@ p {
 }
 
 .before-start-shell {
-  margin-top: clamp(20px, 4vw, 32px);
+  margin-top: clamp(2px, 0.5vw, 6px);
 }
 
 .before-start-hero {
@@ -1101,7 +1101,7 @@ p {
   }
 
   .before-start-shell {
-    margin-top: 14px;
+    margin-top: 2px;
   }
 
   .before-start-hero {
@@ -1939,18 +1939,53 @@ p {
 }
 
 .review-values-shell {
-  margin-top: clamp(20px, 4vw, 32px);
+  margin-top: clamp(2px, 0.5vw, 6px);
 }
 
 .review-values-hero {
   position: relative;
   display: grid;
-  min-height: clamp(220px, 28vw, 320px);
+  min-height: clamp(360px, 46vw, 560px);
   align-items: center;
-  padding: clamp(36px, 5.5vw, 64px) clamp(20px, 5vw, 72px) clamp(24px, 4vw, 38px);
+  padding: clamp(42px, 6vw, 74px) clamp(20px, 5vw, 72px) clamp(88px, 10vw, 152px);
   background: linear-gradient(135deg, #fff7f1 0%, #f7ece4 55%, #f3e6dd 100%);
 }
 
+
+.compare-marriage-hero {
+  overflow: hidden;
+  isolation: isolate;
+  min-height: clamp(320px, 41vw, 500px);
+  padding: clamp(42px, 6vw, 74px) clamp(20px, 5vw, 72px) clamp(34px, 4.2vw, 56px);
+}
+
+.compare-marriage-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(95deg, rgba(255, 251, 247, 0.97) 0%, rgba(250, 241, 232, 0.93) 42%, rgba(247, 236, 226, 0.62) 57%, rgba(247, 236, 226, 0.12) 74%, rgba(247, 236, 226, 0) 100%);
+}
+
+.compare-marriage-hero__image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.compare-marriage-hero__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 84% center;
+}
+
+.compare-marriage-hero__content {
+  position: relative;
+  z-index: 2;
+  margin-left: clamp(12px, 4.6vw, 64px);
+  max-width: min(58ch, calc(100% - clamp(12px, 4.6vw, 64px)));
+}
 .review-values-hero__content {
   width: min(1120px, 100%);
   margin: 0 auto;
@@ -1983,6 +2018,15 @@ p {
   padding: clamp(24px, 4vw, 40px);
 }
 
+
+.compare-marriage-shell {
+  margin-top: clamp(-56px, -4.6vw, -40px);
+}
+
+.compare-marriage-article {
+  position: relative;
+}
+
 .review-values-article > section + section {
   margin-top: clamp(24px, 4vw, 36px);
 }
@@ -1997,12 +2041,34 @@ p {
 
 @media (max-width: 780px) {
   .review-values-shell {
-    margin-top: 14px;
+    margin-top: 2px;
+  }
+
+  .compare-marriage-shell {
+    margin-top: 4px;
   }
 
   .review-values-hero {
-    min-height: clamp(220px, 64vw, 290px);
-    padding: 42px 16px 28px;
+    min-height: clamp(310px, 90vw, 430px);
+    padding: 40px 16px 58px;
+  }
+
+  .compare-marriage-hero {
+    min-height: clamp(288px, 84vw, 392px);
+    padding: 38px 16px 30px;
+  }
+
+  .compare-marriage-hero::before {
+    background: linear-gradient(180deg, rgba(255, 251, 247, 0.97) 0%, rgba(250, 241, 232, 0.9) 40%, rgba(247, 236, 226, 0.35) 64%, rgba(247, 236, 226, 0) 100%);
+  }
+
+  .compare-marriage-hero__image img {
+    object-position: 72% center;
+  }
+
+  .compare-marriage-hero__content {
+    margin-left: clamp(8px, 3vw, 18px);
+    max-width: min(62ch, 100%);
   }
 
   .review-values-title {

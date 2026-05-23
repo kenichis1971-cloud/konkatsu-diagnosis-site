@@ -1945,9 +1945,9 @@ p {
 .review-values-hero {
   position: relative;
   display: grid;
-  min-height: clamp(300px, 42vw, 420px);
+  min-height: clamp(220px, 28vw, 320px);
   align-items: center;
-  padding: clamp(40px, 6vw, 72px) clamp(20px, 5vw, 72px) clamp(28px, 5vw, 48px);
+  padding: clamp(36px, 5.5vw, 64px) clamp(20px, 5vw, 72px) clamp(24px, 4vw, 38px);
   background: linear-gradient(135deg, #fff7f1 0%, #f7ece4 55%, #f3e6dd 100%);
 }
 
@@ -1958,12 +1958,13 @@ p {
 }
 
 .review-values-title {
-  max-width: 24ch;
+  max-width: min(26ch, 100%);
   margin-top: 0;
   margin-bottom: 16px;
   color: #4e3529;
   text-wrap: balance;
   overflow-wrap: anywhere;
+  word-break: normal;
   font-size: clamp(2rem, 4vw, 2.8rem);
   line-height: 1.28;
 }
@@ -2000,8 +2001,8 @@ p {
   }
 
   .review-values-hero {
-    min-height: clamp(310px, 96vw, 420px);
-    padding: 48px 16px 34px;
+    min-height: clamp(220px, 64vw, 290px);
+    padding: 42px 16px 28px;
   }
 
   .review-values-title {

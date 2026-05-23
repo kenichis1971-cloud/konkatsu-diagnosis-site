@@ -53,8 +53,8 @@ export default function CompareMarriageAgenciesArticlePage() {
         </div>
       </section>
 
-      <div className="page-shell review-values-shell">
-        <article className="page-card content-area review-values-article" aria-labelledby="compare-marriage-agencies-title">
+      <div className="page-shell review-values-shell compare-marriage-shell">
+        <article className="page-card content-area review-values-article compare-marriage-article" aria-labelledby="compare-marriage-agencies-title">
           <section aria-labelledby="compare-marriage-agencies-intro">
               <h2 id="compare-marriage-agencies-intro">1. はじめに</h2>
               <p>

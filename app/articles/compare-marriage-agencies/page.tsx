@@ -35,6 +35,17 @@ export default function CompareMarriageAgenciesArticlePage() {
   return (
     <main>
       <section className="review-values-hero" aria-labelledby="compare-marriage-agencies-title">
+        <picture className="review-values-hero__picture">
+          <source media="(max-width: 780px)" srcSet="/images/articles-compare-marriage-agencies-hero-mobile.png" />
+          <img
+            className="review-values-hero__image"
+            src="/images/articles-compare-marriage-agencies-hero-desktop.png"
+            alt=""
+            loading="eager"
+            decoding="async"
+          />
+        </picture>
+        <div className="review-values-hero__overlay" aria-hidden="true" />
         <div className="review-values-hero__content">
           <p className="eyebrow">Article</p>
           <h1 id="compare-marriage-agencies-title" className="review-values-title">

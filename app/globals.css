@@ -1983,8 +1983,8 @@ p {
 .compare-marriage-hero__content {
   position: relative;
   z-index: 2;
-  margin-left: clamp(28px, 6.8vw, 120px);
-  max-width: min(58ch, calc(100% - clamp(28px, 6.8vw, 120px)));
+  margin-left: clamp(12px, 4.6vw, 64px);
+  max-width: min(58ch, calc(100% - clamp(12px, 4.6vw, 64px)));
 }
 .review-values-hero__content {
   width: min(1120px, 100%);

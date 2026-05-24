@@ -2057,6 +2057,14 @@ p {
   line-height: 1.28;
 }
 
+
+.review-marriage-values-hero .review-values-title,
+.review-fatigue-hero .review-values-title {
+  max-width: none;
+  white-space: nowrap;
+  font-size: clamp(1.9rem, 3.2vw, 2.55rem);
+}
+
 .review-values-lead {
   max-width: 62ch;
   margin-bottom: 0;
@@ -2155,6 +2163,13 @@ p {
     max-width: 100%;
     font-size: clamp(1.65rem, 7vw, 2.08rem);
     line-height: 1.35;
+  }
+
+  .review-marriage-values-hero .review-values-title,
+  .review-fatigue-hero .review-values-title {
+    max-width: 100%;
+    white-space: normal;
+    font-size: clamp(1.65rem, 7vw, 2.08rem);
   }
 
   .review-values-lead {

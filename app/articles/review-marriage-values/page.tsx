@@ -41,7 +41,7 @@ export default function ReviewMarriageValuesArticlePage() {
         </picture>
         <div className="review-values-hero__content review-marriage-values-hero__content">
           <p className="eyebrow">Article</p>
-          <h1 id="review-values-title" className="review-values-title">結婚観を見直したいときに考えること</h1>
+          <h1 id="review-values-title" className="review-values-title">結婚観を見直したい時に考える事</h1>
           <p className="review-values-lead">
             婚活を続けていると、条件だけでは整理しきれない迷いが出ることがあります。
             そんなときは、今の自分がどんな暮らしや関係性を心地よいと感じるかを、やわらかく言葉にしてみる時間が役立ちます。

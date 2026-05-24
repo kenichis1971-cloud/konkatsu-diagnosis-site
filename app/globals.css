@@ -2065,6 +2065,22 @@ p {
   font-size: clamp(1.9rem, 3.2vw, 2.55rem);
 }
 
+
+.review-marriage-values-hero__content,
+.review-fatigue-hero__content {
+  width: min(860px, 100%);
+  margin: 0 auto;
+  max-width: 860px;
+}
+
+.review-marriage-values-hero .review-values-lead,
+.review-fatigue-hero .review-values-lead {
+  max-width: min(76ch, 100%);
+  font-size: clamp(1.04rem, 1.28vw, 1.12rem);
+  line-height: 1.86;
+  text-align: left;
+}
+
 .review-values-lead {
   max-width: 62ch;
   margin-bottom: 0;
@@ -2170,6 +2186,19 @@ p {
     max-width: 100%;
     white-space: normal;
     font-size: clamp(1.65rem, 7vw, 2.08rem);
+  }
+
+  .review-marriage-values-hero__content,
+  .review-fatigue-hero__content {
+    width: 100%;
+    max-width: min(62ch, 100%);
+  }
+
+  .review-marriage-values-hero .review-values-lead,
+  .review-fatigue-hero .review-values-lead {
+    max-width: 100%;
+    font-size: clamp(0.96rem, 3.7vw, 1.05rem);
+    line-height: 1.74;
   }
 
   .review-values-lead {

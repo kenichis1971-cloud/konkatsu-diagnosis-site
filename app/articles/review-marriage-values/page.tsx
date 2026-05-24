@@ -43,8 +43,7 @@ export default function ReviewMarriageValuesArticlePage() {
           <p className="eyebrow">Article</p>
           <h1 id="review-values-title" className="review-values-title">結婚観を見直したい時に考える事</h1>
           <p className="review-values-lead">
-            婚活を続けていると、条件だけでは整理しきれない迷いが出ることがあります。
-            そんなときは、今の自分がどんな暮らしや関係性を心地よいと感じるかを、やわらかく言葉にしてみる時間が役立ちます。
+            婚活を続けていると、条件だけでは答えを出しにくい迷いが生まれることがあります。そんなときは、自分がどんな暮らしや関係を心地よいと感じるのかを、あらためて言葉にしてみることが、気持ちを整理するきっかけになります。
           </p>
         </div>
       </section>

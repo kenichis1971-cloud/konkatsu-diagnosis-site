@@ -62,7 +62,7 @@ export default function MarriageActivityFatigueArticlePage() {
           <p className="eyebrow">Article</p>
           <h1 id="marriage-fatigue-title" className="review-values-title">婚活で疲れた時の気持ちの整え方</h1>
           <p className="review-values-lead">
-            婚活を続けていると、疲れや迷いを感じる時期があります。無理に前向きになるより、いまの気持ちと活動のペースをやさしく整えることが、次の一歩を選ぶ助けになります。
+            婚活を続けていると、疲れたり、気持ちが揺れたりする時期は自然に訪れます。そんなときは、無理に前向きになろうとするよりも、今の気持ちを受け止めながら、自分に合うペースを整えていくことが、次の一歩につながります。
           </p>
         </div>
       </section>

@@ -53,8 +53,12 @@ const resetActions = [
 export default function MarriageActivityFatigueArticlePage() {
   return (
     <main>
-      <section className="review-values-hero" aria-labelledby="marriage-fatigue-title">
-        <div className="review-values-hero__content">
+      <section className="review-values-hero review-fatigue-hero" aria-labelledby="marriage-fatigue-title">
+        <picture className="review-fatigue-hero__image">
+          <source media="(max-width: 780px)" srcSet="/images/articles-when-marriage-activities-feel-tiring-hero-mobile.png" />
+          <img src="/images/articles-when-marriage-activities-feel-tiring-hero-desktop.png" alt="" />
+        </picture>
+        <div className="review-values-hero__content review-fatigue-hero__content">
           <p className="eyebrow">Article</p>
           <h1 id="marriage-fatigue-title" className="review-values-title">婚活で疲れたときの気持ちの整え方</h1>
           <p className="review-values-lead">
@@ -63,7 +67,7 @@ export default function MarriageActivityFatigueArticlePage() {
         </div>
       </section>
 
-      <div className="page-shell review-values-shell">
+      <div className="page-shell review-values-shell review-fatigue-shell">
         <article className="page-card content-area review-values-article" aria-labelledby="marriage-fatigue-title">
           <section aria-labelledby="marriage-fatigue-intro">
             <h2 id="marriage-fatigue-intro">1. はじめに</h2>

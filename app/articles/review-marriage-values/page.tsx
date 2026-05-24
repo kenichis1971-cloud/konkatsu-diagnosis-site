@@ -34,8 +34,12 @@ const reviewPoints = [
 export default function ReviewMarriageValuesArticlePage() {
   return (
     <main>
-      <section className="review-values-hero" aria-labelledby="review-values-title">
-        <div className="review-values-hero__content">
+      <section className="review-values-hero review-marriage-values-hero" aria-labelledby="review-values-title">
+        <picture className="review-marriage-values-hero__image">
+          <source media="(max-width: 780px)" srcSet="/images/articles-review-marriage-values-hero-mobile.png" />
+          <img src="/images/articles-review-marriage-values-hero-desktop.png" alt="" />
+        </picture>
+        <div className="review-values-hero__content review-marriage-values-hero__content">
           <p className="eyebrow">Article</p>
           <h1 id="review-values-title" className="review-values-title">結婚観を見直したいときに考えること</h1>
           <p className="review-values-lead">
@@ -45,7 +49,7 @@ export default function ReviewMarriageValuesArticlePage() {
         </div>
       </section>
 
-      <div className="page-shell review-values-shell">
+      <div className="page-shell review-values-shell review-marriage-values-shell">
         <article className="page-card content-area review-values-article" aria-labelledby="review-values-title">
           <section aria-labelledby="review-values-intro">
             <h2 id="review-values-intro">1. はじめに</h2>

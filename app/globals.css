@@ -1952,6 +1952,59 @@ p {
 }
 
 
+
+.review-marriage-values-shell,
+.review-fatigue-shell {
+  margin-top: clamp(-24px, -2vw, -12px);
+}
+
+.review-marriage-values-hero,
+.review-fatigue-hero {
+  overflow: hidden;
+  isolation: isolate;
+  min-height: clamp(320px, 41vw, 500px);
+  padding: clamp(42px, 6vw, 74px) clamp(20px, 5vw, 72px) clamp(34px, 4.2vw, 56px);
+}
+
+.review-marriage-values-hero::before,
+.review-fatigue-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(96deg, rgba(255, 252, 248, 0.98) 0%, rgba(251, 243, 234, 0.93) 41%, rgba(247, 236, 226, 0.64) 58%, rgba(247, 236, 226, 0.16) 74%, rgba(247, 236, 226, 0) 100%);
+}
+
+.review-marriage-values-hero__image,
+.review-fatigue-hero__image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.review-marriage-values-hero__image img,
+.review-fatigue-hero__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.review-marriage-values-hero__image img {
+  object-position: 82% center;
+}
+
+.review-fatigue-hero__image img {
+  object-position: 84% center;
+}
+
+.review-marriage-values-hero__content,
+.review-fatigue-hero__content {
+  position: relative;
+  z-index: 2;
+  margin-left: clamp(12px, 4.4vw, 64px);
+  max-width: min(58ch, calc(100% - clamp(12px, 4.4vw, 64px)));
+}
+
 .compare-marriage-hero {
   overflow: hidden;
   isolation: isolate;
@@ -2004,6 +2057,30 @@ p {
   line-height: 1.28;
 }
 
+
+.review-marriage-values-hero .review-values-title,
+.review-fatigue-hero .review-values-title {
+  max-width: none;
+  white-space: nowrap;
+  font-size: clamp(1.9rem, 3.2vw, 2.55rem);
+}
+
+
+.review-marriage-values-hero__content,
+.review-fatigue-hero__content {
+  width: min(860px, 100%);
+  margin: 0 auto;
+  max-width: 860px;
+}
+
+.review-marriage-values-hero .review-values-lead,
+.review-fatigue-hero .review-values-lead {
+  max-width: min(76ch, 100%);
+  font-size: clamp(1.04rem, 1.28vw, 1.12rem);
+  line-height: 1.86;
+  text-align: left;
+}
+
 .review-values-lead {
   max-width: 62ch;
   margin-bottom: 0;
@@ -2048,6 +2125,11 @@ p {
     margin-top: 4px;
   }
 
+  .review-marriage-values-shell,
+  .review-fatigue-shell {
+    margin-top: 6px;
+  }
+
   .review-values-hero {
     min-height: clamp(310px, 90vw, 430px);
     padding: 40px 16px 58px;
@@ -2058,15 +2140,37 @@ p {
     padding: 38px 16px 30px;
   }
 
+  .review-marriage-values-hero,
+  .review-fatigue-hero {
+    min-height: clamp(288px, 84vw, 392px);
+    padding: 38px 16px 30px;
+  }
+
   .compare-marriage-hero::before {
     background: linear-gradient(180deg, rgba(255, 251, 247, 0.97) 0%, rgba(250, 241, 232, 0.9) 40%, rgba(247, 236, 226, 0.35) 64%, rgba(247, 236, 226, 0) 100%);
+  }
+
+  .review-marriage-values-hero::before,
+  .review-fatigue-hero::before {
+    background: linear-gradient(180deg, rgba(255, 252, 248, 0.97) 0%, rgba(250, 241, 232, 0.91) 40%, rgba(247, 236, 226, 0.4) 64%, rgba(247, 236, 226, 0) 100%);
   }
 
   .compare-marriage-hero__image img {
     object-position: 72% center;
   }
 
+  .review-marriage-values-hero__image img,
+  .review-fatigue-hero__image img {
+    object-position: center center;
+  }
+
   .compare-marriage-hero__content {
+    margin-left: clamp(8px, 3vw, 18px);
+    max-width: min(62ch, 100%);
+  }
+
+  .review-marriage-values-hero__content,
+  .review-fatigue-hero__content {
     margin-left: clamp(8px, 3vw, 18px);
     max-width: min(62ch, 100%);
   }
@@ -2075,6 +2179,26 @@ p {
     max-width: 100%;
     font-size: clamp(1.65rem, 7vw, 2.08rem);
     line-height: 1.35;
+  }
+
+  .review-marriage-values-hero .review-values-title,
+  .review-fatigue-hero .review-values-title {
+    max-width: 100%;
+    white-space: normal;
+    font-size: clamp(1.65rem, 7vw, 2.08rem);
+  }
+
+  .review-marriage-values-hero__content,
+  .review-fatigue-hero__content {
+    width: 100%;
+    max-width: min(62ch, 100%);
+  }
+
+  .review-marriage-values-hero .review-values-lead,
+  .review-fatigue-hero .review-values-lead {
+    max-width: 100%;
+    font-size: clamp(0.96rem, 3.7vw, 1.05rem);
+    line-height: 1.74;
   }
 
   .review-values-lead {

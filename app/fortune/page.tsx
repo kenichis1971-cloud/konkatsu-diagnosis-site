@@ -172,6 +172,17 @@ export default async function FortunePage({ searchParams }: FortunePageProps) {
             </p>
           </section>
 
+          <section className="fortune-next-step" aria-labelledby="fortune-cta-title">
+            <div>
+              <p className="eyebrow">Coming Soon CTA</p>
+              <h2 id="fortune-cta-title">気持ちを整理したい方へ</h2>
+              <p>
+                鑑定メニューは準備中です。必要な方に向けて、後日ご案内予定です。
+                今はこのページを、婚活中の迷いや結婚観を落ち着いて見直すためのメモ代わりとしてご活用ください。
+              </p>
+            </div>
+          </section>
+
           <section className="fortune-next-step" aria-labelledby="fortune-next-title">
             <div>
               <p className="eyebrow">With Diagnosis</p>

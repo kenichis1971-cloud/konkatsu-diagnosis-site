@@ -165,7 +165,7 @@ export const diagnosisResults: Record<DiagnosisTypeId, DiagnosisResult> = {
       { title: "婚活コラム 準備中", description: "焦らず比較軸を整理するために、見極め方や確認ポイントを短くまとめています。" },
       { title: "結婚相談所比較 準備中", description: "サポート内容や相談のしやすさを比べながら、判断軸を整える参考情報です。" },
       { title: "婚活アプリ比較 準備中", description: "自分のペースで確認しやすい出会い方を、使いやすさの観点で整理できます。" },
-      { title: "占い鑑定 準備中", description: "迷いを言葉にして、自己理解と選択肢整理を補助する参考ページです。" },
+      { title: "占い鑑定 準備中", description: "気持ちを整理したい方へ向けて、迷いや考えを言葉にする補助として使えるページです。" },
     ],
   },
   speed: {
@@ -178,7 +178,7 @@ export const diagnosisResults: Record<DiagnosisTypeId, DiagnosisResult> = {
       { title: "結婚相談所比較 準備中", description: "活動ペースとサポート量を見比べて、短期集中で進める計画を立てやすくします。" },
       { title: "婚活アプリ比較 準備中", description: "限られた時間でも使いやすい機能や進め方を比較して整理できます。" },
       { title: "婚活コラム 準備中", description: "活動量の調整や振り返りのコツを押さえ、ペース配分を整えるヒント集です。" },
-      { title: "占い鑑定 準備中", description: "気持ちを整えながら、自己理解と選択肢整理を補助する参考ページです。" },
+      { title: "占い鑑定 準備中", description: "気持ちを整理したい方へ向けて、迷いや考えを言葉にする補助として使えるページです。" },
     ],
   },
   natural: {
@@ -191,7 +191,7 @@ export const diagnosisResults: Record<DiagnosisTypeId, DiagnosisResult> = {
       { title: "婚活コラム 準備中", description: "無理のない出会い方を整理するために、会話や進め方のコツを短く確認できます。" },
       { title: "婚活アプリ比較 準備中", description: "自然に始めやすいサービスを、使い方や雰囲気の観点で比較できます。" },
       { title: "結婚相談所比較 準備中", description: "自然体を大切にしながら相談できるサポートの違いを整理できます。" },
-      { title: "占い鑑定 準備中", description: "迷いを言葉にして、自己理解と選択肢整理を補助する参考ページです。" },
+      { title: "占い鑑定 準備中", description: "気持ちを整理したい方へ向けて、迷いや考えを言葉にする補助として使えるページです。" },
     ],
   },
   condition: {
@@ -204,7 +204,7 @@ export const diagnosisResults: Record<DiagnosisTypeId, DiagnosisResult> = {
       { title: "結婚相談所比較 準備中", description: "条件・費用・サポート内容を比較して、優先順位を整理しやすくします。" },
       { title: "婚活アプリ比較 準備中", description: "条件検索のしやすさや料金感を見比べ、使いやすさを整理できます。" },
       { title: "婚活コラム 準備中", description: "条件の分け方や見直し方を短く確認し、判断軸を整えるヒント集です。" },
-      { title: "占い鑑定 準備中", description: "迷いを言葉にして、自己理解と選択肢整理を補助する参考ページです。" },
+      { title: "占い鑑定 準備中", description: "気持ちを整理したい方へ向けて、迷いや考えを言葉にする補助として使えるページです。" },
     ],
   },
   confidence: {
@@ -215,7 +215,7 @@ export const diagnosisResults: Record<DiagnosisTypeId, DiagnosisResult> = {
     nextStep: "過去に褒められたことや、自然にできている気遣いを書き出してみましょう。プロフィールや会話の準備を小さく整えるだけでも、次の一歩を考えやすくなります。",
     actionCards: [
       { title: "婚活コラム 準備中", description: "気持ちを整えながら、強みや伝え方を見直すヒントを短く確認できます。" },
-      { title: "占い鑑定 準備中", description: "不安を言葉にして、自己理解と選択肢整理を補助する参考ページです。" },
+      { title: "占い鑑定 準備中", description: "結婚への迷いや不安を、少し言葉にしてみたい方に向けた整理ページです。" },
       { title: "結婚相談所比較 準備中", description: "相談しながら進めたい場合のサポート内容や費用感を整理できます。" },
       { title: "婚活アプリ比較 準備中", description: "小さく試せる行動を始めるために、使いやすい機能を比較できます。" },
     ],
@@ -230,7 +230,7 @@ export const diagnosisResults: Record<DiagnosisTypeId, DiagnosisResult> = {
       { title: "婚活アプリ比較 準備中", description: "小さく試せる行動を考えるために、始めやすい使い方や機能を比較できます。" },
       { title: "婚活コラム 準備中", description: "15分でできる準備を中心に、続けやすい行動の作り方を短く確認できます。" },
       { title: "結婚相談所比較 準備中", description: "一人で進めにくいときに、相談できるサポートの違いを整理できます。" },
-      { title: "占い鑑定 準備中", description: "迷いを言葉にして、自己理解と選択肢整理を補助する参考ページです。" },
+      { title: "占い鑑定 準備中", description: "気持ちを整理したい方へ向けて、迷いや考えを言葉にする補助として使えるページです。" },
     ],
   },
   restart: {
@@ -240,7 +240,7 @@ export const diagnosisResults: Record<DiagnosisTypeId, DiagnosisResult> = {
     commonPattern: "過去の経験を基準にしすぎると、新しい相手にも同じ不安を重ねてしまうことがあります。久しぶりの婚活では、場の雰囲気や進め方に慣れるまで負担を感じやすいかもしれません。",
     nextStep: "まずは過去から学んだことと、これから変えたいことを分けて書いてみましょう。慣らし期間を作り、少人数とのやり取りから再開すると、負担を調整しやすくなります。",
     actionCards: [
-      { title: "占い鑑定 準備中", description: "気持ちや結婚観を見直しながら、自己理解と選択肢整理を補助する参考ページです。" },
+      { title: "占い鑑定 準備中", description: "結婚への迷いや不安を、少し言葉にしてみたい方に向けた整理ページです。" },
       { title: "婚活コラム 準備中", description: "再スタート前に整理したいことや、負担を抑える進め方を短く確認できます。" },
       { title: "結婚相談所比較 準備中", description: "ブランク期を踏まえて相談しやすいサポート体制を比較できます。" },
       { title: "婚活アプリ比較 準備中", description: "久しぶりでも試しやすい使い方を、機能や費用感の面で整理できます。" },
@@ -253,7 +253,7 @@ export const diagnosisResults: Record<DiagnosisTypeId, DiagnosisResult> = {
     commonPattern: "気持ちが定まらないまま動くと、出会いの場で迷いが出たり、相手に合わせすぎたりすることがあります。結婚したい理由が曖昧だと、選択肢を比べる基準も揺れやすくなるかもしれません。",
     nextStep: "理想の暮らし、避けたい暮らし、誰かと分かち合いたい時間を書き出してみましょう。すぐに結論を出すより、結婚観を言葉にすることから始めるのがおすすめです。",
     actionCards: [
-      { title: "占い鑑定 準備中", description: "価値観・生活観・安心感を見直し、自己理解と選択肢整理を補助する参考ページです。" },
+      { title: "占い鑑定 準備中", description: "価値観や結婚観を見直したいときに、考えを整理する補助として使えるページです。" },
       { title: "婚活コラム 準備中", description: "結婚観や理想の暮らしを言葉にするための整理ポイントを短く確認できます。" },
       { title: "結婚相談所比較 準備中", description: "相談しながら進めたい場合のサポート内容や費用感を比較できます。" },
       { title: "婚活アプリ比較 準備中", description: "価値観を確認しやすい使い方を、条件や機能の面で整理できます。" },

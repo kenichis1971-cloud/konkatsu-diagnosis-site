@@ -45,10 +45,29 @@ const comparisonPoints = [
 ];
 
 const checkItems = [
-  "自分はサポートの手厚さをどれくらい求めているか",
-  "月々の費用や活動期間をどの程度にしたいか",
-  "紹介の数・検索のしやすさ・出会い方の幅をどう見たいか",
-  "仕事や生活リズムに合わせて続けやすい進め方か",
+  "どのくらいサポートが必要か（定期面談・チャット相談など）",
+  "月額費用・初期費用をどこまで許容できるか",
+  "オンライン中心か、対面サポート希望か",
+  "自分のペースで進めたいか、伴走型で進めたいか",
+];
+
+const consultationPoints = [
+  {
+    title: "料金の内訳を先に確認する",
+    body: "初期費用、月額費用、オプション料金などを分けて見て、想定より負担が増えないかを確認します。",
+  },
+  {
+    title: "サポートの範囲を具体的に聞く",
+    body: "プロフィール作成、紹介後のフォロー、活動中の相談方法など、実際に受けられる支援内容を整理します。",
+  },
+  {
+    title: "活動ペースの目安をすり合わせる",
+    body: "月あたりの紹介数や面談頻度の目安を聞き、仕事や生活とのバランスを取りやすいか確認します。",
+  },
+  {
+    title: "複数の選択肢を同じ軸で比較する",
+    body: "感覚だけで決めず、費用・サポート・活動しやすさを同じ観点で並べて検討します。",
+  },
 ];
 
 type MarriageAgenciesPageProps = {
@@ -69,7 +88,7 @@ export default async function MarriageAgenciesPage({ searchParams }: MarriageAge
             <span className="agencies-title-line">整理したいこと</span>
           </h1>
           <p>
-            診断結果とあわせて、サポート・費用・出会いの数・進め方などを落ち着いて見比べるための準備ページです。特定サービスの紹介や外部リンクは、今後の掲載に向けて準備中です。
+            診断ページから来た方にも読みやすいように、結婚相談所を婚活の選択肢のひとつとして比較しやすくまとめた準備ページです。特定サービスの紹介や外部リンクは、今後の掲載に向けて準備中です。
           </p>
         </div>
       </section>
@@ -140,6 +159,25 @@ export default async function MarriageAgenciesPage({ searchParams }: MarriageAge
             </ul>
           </section>
 
+          <section className="agencies-checklist" aria-labelledby="agencies-consultation-title">
+            <div>
+              <p className="eyebrow">Before Consultation</p>
+              <h2 id="agencies-consultation-title">無料相談を検討する前に見るポイント</h2>
+              <p>
+                無料相談は、申し込みを急ぐためではなく、自分に合う活動スタイルを整理するための時間として使うと比較しやすくなります。
+              </p>
+            </div>
+            <ul>
+              {consultationPoints.map((item) => (
+                <li key={item.title}>
+                  <strong>{item.title}</strong>
+                  <br />
+                  {item.body}
+                </li>
+              ))}
+            </ul>
+          </section>
+
           <section className="agencies-next-step" aria-labelledby="agencies-next-title">
             <div>
               <p className="eyebrow">With Diagnosis</p>
@@ -149,9 +187,15 @@ export default async function MarriageAgenciesPage({ searchParams }: MarriageAge
                 診断結果と合わせて見ると、サポート・費用・活動ペースの優先順位を整理しやすくなります。
               </p>
             </div>
-            <Link className="diagnosis-button diagnosis-button--subtle" href="/diagnosis">
-              10問診断で整理する
-            </Link>
+            <div className="stack-actions">
+              <Link className="diagnosis-button diagnosis-button--subtle" href="/diagnosis">
+                まずは診断結果を見直す
+              </Link>
+              <Link className="diagnosis-button diagnosis-button--subtle" href="/articles">
+                婚活コラムを読む
+              </Link>
+              <p className="agencies-card__memo">相談所比較リンクは準備中です。</p>
+            </div>
           </section>
           <DiagnosisReturnLink searchParams={params} />
         </section>

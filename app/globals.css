@@ -1902,6 +1902,10 @@ p {
   margin-bottom: 0;
 }
 
+.fortune-next-step + .fortune-next-step {
+  margin-top: clamp(24px, 3.5vw, 40px);
+}
+
 @media (max-width: 780px) {
   .fortune-hero {
     min-height: clamp(560px, 142vw, 700px);

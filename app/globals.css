@@ -1575,6 +1575,10 @@ p {
   margin-bottom: clamp(34px, 5vw, 52px);
 }
 
+.apps-card-grid--triple {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .apps-card {
   display: grid;
   gap: 12px;
@@ -1684,6 +1688,15 @@ p {
   margin-bottom: 0;
 }
 
+.apps-next-step__actions {
+  display: grid;
+  gap: 12px;
+}
+
+.apps-next-step__actions .diagnosis-button {
+  width: 100%;
+}
+
 @media (max-width: 780px) {
   .apps-hero {
     min-height: clamp(500px, 132vw, 660px);
@@ -1709,6 +1722,7 @@ p {
 
   .apps-overview,
   .apps-card-grid,
+  .apps-card-grid--triple,
   .apps-checklist,
   .apps-difference-grid,
   .apps-next-step {

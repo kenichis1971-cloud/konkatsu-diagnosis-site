@@ -101,17 +101,18 @@ export default async function FortunePage({ searchParams }: FortunePageProps) {
         <section className="page-card content-area fortune-content">
           <section className="fortune-overview" aria-labelledby="fortune-overview-title">
             <div>
-              <p className="eyebrow">Coming Soon</p>
-              <h2 id="fortune-overview-title">占い鑑定・結婚観整理メニューは準備中です</h2>
+              <p className="eyebrow">Fortune Menu</p>
+              <h2 id="fortune-overview-title">占い鑑定メニューのご案内</h2>
               <p>
-                現在は受付前のため、外部販売ページや決済ページへのリンクは設置していません。今後、婚活診断の結果を見たあとに、より個別の気持ちや価値観を見直せる導線として整えていく予定です。
+                婚活診断の結果だけでは整理しきれない気持ちや迷いがある方へ、公開中のSTORESページで鑑定メニューをご案内しています。
+                占い・鑑定は、気持ちの整理や選択肢を考える補助としてご利用ください。
               </p>
             </div>
             <aside className="fortune-status-card" aria-label="受付状況">
-              <span>準備中</span>
-              <h3>今後追加予定の内容</h3>
+              <span>公開中</span>
+              <h3>STORESショップでご案内中</h3>
               <p>
-                タロット鑑定・西洋占星術・結婚観整理・婚活の迷い整理など、自己理解を深めるためのメニュー候補を検討しています。
+                タロット鑑定・西洋占星術・結婚観整理など、気持ちを落ち着いて見直すための鑑定メニューを掲載しています。
               </p>
             </aside>
           </section>
@@ -174,13 +175,20 @@ export default async function FortunePage({ searchParams }: FortunePageProps) {
 
           <section className="fortune-next-step" aria-labelledby="fortune-cta-title">
             <div>
-              <p className="eyebrow">Coming Soon CTA</p>
-              <h2 id="fortune-cta-title">気持ちを整理したい方へ</h2>
+              <p className="eyebrow">Fortune CTA</p>
+              <h2 id="fortune-cta-title">気持ち整理の鑑定ページを見る</h2>
               <p>
-                鑑定メニューは準備中です。必要な方に向けて、後日ご案内予定です。
-                今はこのページを、婚活中の迷いや結婚観を落ち着いて見直すためのメモ代わりとしてご活用ください。
+                必要な方だけ、鑑定メニューをご確認ください。外部のSTORESページへ移動します。
               </p>
             </div>
+            <a
+              className="diagnosis-button"
+              href="https://fortuneteller-lucia.stores.jp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              外部サイトで鑑定メニューを見る
+            </a>
           </section>
 
           <section className="fortune-next-step" aria-labelledby="fortune-next-title">

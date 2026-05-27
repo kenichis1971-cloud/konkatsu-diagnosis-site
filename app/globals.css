@@ -846,6 +846,25 @@ p {
   margin-top: 28px;
 }
 
+.articles-note-prep {
+  margin-top: 28px;
+  display: grid;
+  gap: 10px;
+}
+
+.articles-note-prep__list {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 6px;
+}
+
+.articles-note-prep .article-card-link {
+  min-height: 38px;
+  padding: 8px 14px;
+  border-radius: 999px;
+}
+
 .articles-hero {
   position: relative;
   display: grid;

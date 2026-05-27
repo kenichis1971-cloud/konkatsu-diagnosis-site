@@ -106,6 +106,27 @@ export default async function ArticlesPage({ searchParams }: ArticlesPageProps) 
               </article>
             ))}
           </div>
+
+          <div className="text-card text-card--large articles-note-prep" aria-labelledby="articles-note-prep-title">
+            <p className="eyebrow">Preparing</p>
+            <h3 id="articles-note-prep-title">note・ブログ連携は準備中です</h3>
+            <p>
+              noteは、婚活中の気持ちや迷いを整理する読みものとして、診断結果をもう少し深掘りしたいときの補助コンテンツを想定しています。
+            </p>
+            <p>
+              まずは公開中のコラムをご覧いただき、もっと深く整理したい方向けに、将来的に必要な方だけ有料noteや鑑定メニューへ進める導線を準備していく予定です。
+            </p>
+            <ul className="articles-note-prep__list">
+              <li>noteは準備中です。</li>
+              <li>詳しい読みものは後日ご案内予定です。</li>
+              <li>ブログ・note連携は準備中です。</li>
+            </ul>
+            <p>
+              <Link className="article-card-link article-card-link--subtle" href="/articles">
+                公開中のコラムを先に読む
+              </Link>
+            </p>
+          </div>
           <div className="text-card text-card--large articles-note">
             <h3>診断結果と合わせて読むと整理しやすいテーマです</h3>
             <p>

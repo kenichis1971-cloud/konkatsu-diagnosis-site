@@ -5,77 +5,86 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata = createPageMetadata({
   title: "婚活アプリ比較 | 使う前に整理したいポイント",
   description:
-    "婚活アプリを使う前に、真剣度・使いやすさ・費用感・価値観の確認方法を落ち着いて整理するページです。",
+    "婚活アプリ・マッチングアプリを比較する前に、真剣度・年齢層・費用感・使いやすさ・安全性などを整理するページです。",
   path: "/marriage-apps",
 });
 
 const comparisonCards = [
   {
-    title: "真剣度を重視したい人向け",
-    label: "比較予定",
-    body: "利用目的や結婚への温度感を見ながら、安心してやり取りを始めるための確認材料を整理する観点です。",
-    pointsTitle: "見るポイント",
+    title: "真剣度",
+    label: "比較軸",
+    body: "婚活向きの利用者が多いか、恋活寄りの使い方が中心かを確認しておくと、目的とのズレを減らしやすくなります。",
+    pointsTitle: "確認ポイント",
     points: [
-      "利用目的の違いがプロフィールや案内文から読み取れるか",
-      "結婚への温度感や希望時期を確認しやすいか",
-      "プロフィール項目や本人確認の内容を事前に把握できるか",
+      "利用目的（婚活・恋活）がプロフィールや案内で分かるか",
+      "結婚時期の希望など、将来に関する項目を確認しやすいか",
+      "自分の活動目的と、サービス全体の雰囲気に差がないか",
     ],
-    memo: "メッセージ前に、相手が公開している情報の範囲と自分が確認したい項目を分けておくと落ち着いて判断しやすくなります。",
   },
   {
-    title: "まずは気軽に始めたい人向け",
-    label: "準備中",
-    body: "操作のしやすさや登録前に見られる情報を確認し、自分のペースで無理なく続けられるかを考える観点です。",
-    pointsTitle: "向いている人",
+    title: "年齢層",
+    label: "比較軸",
+    body: "自分の年代に近い利用者が多いかどうかは、やり取りのしやすさや話題の合いやすさに関わるポイントです。",
+    pointsTitle: "確認ポイント",
     points: [
-      "画面の流れや検索条件を直感的に使えるかを重視したい",
-      "登録前に雰囲気や基本機能をある程度確認しておきたい",
-      "短時間でも見直せるなど、自分の生活ペースに合わせたい",
+      "主要な利用年齢層が公開されているか",
+      "自分の年齢帯で無理なく出会いの候補を探せそうか",
+      "年代別の検索や絞り込みが使いやすいか",
     ],
-    memo: "最初から多くの機能を使い切ろうとせず、続けやすい頻度や通知の受け取り方も合わせて確認しておくと安心です。",
   },
   {
-    title: "費用を抑えて試したい人向け",
-    label: "比較予定",
-    body: "無料範囲・月額料金・追加機能を分けて見ながら、試す期間と予算感を決めるための観点です。",
-    pointsTitle: "確認しておきたいこと",
+    title: "費用感",
+    label: "比較軸",
+    body: "無料でできる範囲と有料で広がる範囲を分けて見て、続けられる予算かどうかを考えておくと安心です。",
+    pointsTitle: "確認ポイント",
     points: [
-      "無料で確認できるプロフィール・検索・メッセージ範囲",
-      "月額料金や支払い単位が自分の予算に合っているか",
-      "追加機能の有無と、必要になりそうな場面があるか",
+      "無料で確認できる機能と、有料機能の違い",
+      "月額費用・更新単位・追加課金の有無",
+      "まず試す期間と、見直しタイミングを決められるか",
     ],
-    memo: "使う期間を先に決めておくと、費用だけでなく活動ペースや見直しのタイミングも整理しやすくなります。",
   },
   {
-    title: "価値観や結婚観を重視したい人向け",
-    label: "準備中",
-    body: "条件だけでなく、暮らし方や結婚観を確認しやすいかを見て、自分の大切にしたい軸を整理する観点です。",
-    pointsTitle: "見るポイント",
+    title: "使いやすさ",
+    label: "比較軸",
+    body: "登録から検索、メッセージまでの流れが自分に合っているかは、無理なく続けるための基本になります。",
+    pointsTitle: "確認ポイント",
     points: [
-      "プロフィール項目で生活観や家族観を表現しやすいか",
-      "条件検索で譲れない項目と柔軟に考えたい項目を分けられるか",
-      "会う前に結婚観や活動ペースを確認しやすい設計か",
+      "画面の見やすさや操作の分かりやすさ",
+      "通知頻度や検索条件の調整がしやすいか",
+      "生活リズムの中で、負担なく利用できそうか",
     ],
-    memo: "会う前に聞きたいことをすべて決め込むのではなく、自分が大切にしたい順番をメモしておくと会話の準備になります。",
+  },
+  {
+    title: "安全性・本人確認",
+    label: "比較軸",
+    body: "本人確認、通報、ブロックなどの基本機能を先に確認しておくと、安心して活動しやすくなります。",
+    pointsTitle: "確認ポイント",
+    points: [
+      "本人確認の手順や、年齢確認の案内が明確か",
+      "通報・ブロック・サポート窓口の導線が分かりやすいか",
+      "利用規約や注意事項を登録前に確認できるか",
+    ],
+  },
+  {
+    title: "婚活向きか恋活向きか",
+    label: "比較軸",
+    body: "どちらかが良い悪いではなく、今の自分の目的に合うかどうかを基準にすると選びやすくなります。",
+    pointsTitle: "確認ポイント",
+    points: [
+      "結婚を意識したプロフィール項目が充実しているか",
+      "まずは交流中心で始める設計か、将来の話をしやすい設計か",
+      "自分が望むペースで進めやすい雰囲気か",
+    ],
   },
 ];
 
 const checklistItems = [
-  "真剣度・使いやすさ・費用のうち、今いちばん大切にしたい軸はどれか",
-  "プロフィールや条件だけでなく、価値観や結婚観も確認したいか",
-  "短い時間で進めたいか、時間をかけて少しずつ整理したいか",
-  "結婚相談所のサポートと比べて、自分で進める範囲をどう考えるか",
-];
-
-const differenceItems = [
-  {
-    title: "婚活アプリ",
-    body: "自分のペースで情報を見ながら進めやすい一方で、比較軸や確認したいことを自分で整理しておくと判断しやすくなります。",
-  },
-  {
-    title: "結婚相談所",
-    body: "担当者のサポートや面談を活用しながら進めやすい一方で、費用感やサポート範囲を事前に確認しておくことが大切です。",
-  },
+  "結婚をどのくらい意識して活動したいか",
+  "自分の年齢層に合うサービスか",
+  "月額費用を無理なく許容できるか",
+  "本人確認や通報機能があるか",
+  "メッセージのやり取りを無理なく続けられそうか",
+  "登録後に見直すタイミング（1か月後など）を決めているか",
 ];
 
 type MarriageAppsPageProps = {
@@ -91,11 +100,11 @@ export default async function MarriageAppsPage({ searchParams }: MarriageAppsPag
         <div className="apps-hero__content">
           <p className="eyebrow">Marriage Apps</p>
           <h1 id="apps-title">
-            <span className="apps-title-line">婚活アプリを選ぶ前に</span>
-            <span className="apps-title-line">整理したいこと</span>
+            <span className="apps-title-line">婚活アプリ・マッチングアプリを</span>
+            <span className="apps-title-line">比較する前に整理したいこと</span>
           </h1>
           <p>
-            診断結果とあわせて、真剣度・使いやすさ・費用・価値観などの比較軸をやさしく整理するための準備ページです。特定サービス名や外部URLは、今後の掲載に向けて準備中です。
+            診断結果を見たあとに、次の一歩を落ち着いて考えるためのページです。婚活アプリやマッチングアプリは婚活の選択肢の一つとして、まずは比較軸をやさしく整理していきましょう。
           </p>
         </div>
       </section>
@@ -105,25 +114,24 @@ export default async function MarriageAppsPage({ searchParams }: MarriageAppsPag
           <section className="apps-overview" aria-labelledby="apps-overview-title">
             <div>
               <p className="eyebrow">Preparation</p>
-              <h2 id="apps-overview-title">比較する前に、自分の優先順位をゆっくり確認する</h2>
+              <h2 id="apps-overview-title">比較前に、目的と優先順位を言葉にしておく</h2>
               <p>
-                婚活アプリは、サービスごとに雰囲気や使い方、費用の考え方が異なります。
-                先に自分が大切にしたい軸を言葉にしておくと、情報を見たときに選択肢を整理しやすくなります。
+                先に「何を重視するか」を決めておくと、情報量が多くても見比べやすくなります。真剣度・年齢層・費用感・使いやすさ・安全性の順に、ひとつずつ確認してみてください。
               </p>
             </div>
             <div className="apps-status-card" aria-label="掲載準備状況">
               <span>準備中</span>
-              <h3>サービス比較は今後追加予定です</h3>
+              <h3>婚活アプリ比較リンクは準備中です</h3>
               <p>
-                現時点では、特定の婚活アプリ名や外部URLは掲載していません。まずは選び方の観点を整理するページとしてご利用ください。
+                このページでは、外部URLや特定サービスへの案内は掲載していません。まずは比較・検討の土台づくりとしてご利用ください。
               </p>
             </div>
           </section>
 
           <section aria-labelledby="apps-cards-title">
             <p className="eyebrow">Viewpoints</p>
-            <h2 id="apps-cards-title">比較観点カード</h2>
-            <div className="apps-card-grid">
+            <h2 id="apps-cards-title">婚活アプリ・マッチングアプリの比較軸</h2>
+            <div className="apps-card-grid apps-card-grid--triple">
               {comparisonCards.map((card) => (
                 <article className="apps-card" key={card.title}>
                   <span>{card.label}</span>
@@ -137,7 +145,6 @@ export default async function MarriageAppsPage({ searchParams }: MarriageAppsPag
                       ))}
                     </ul>
                   </div>
-                  <p className="apps-card__memo">{card.memo}</p>
                 </article>
               ))}
             </div>
@@ -146,9 +153,9 @@ export default async function MarriageAppsPage({ searchParams }: MarriageAppsPag
           <section className="apps-checklist" aria-labelledby="apps-checklist-title">
             <div>
               <p className="eyebrow">Checklist</p>
-              <h2 id="apps-checklist-title">婚活アプリを調べる前のメモ</h2>
+              <h2 id="apps-checklist-title">登録前に確認したいポイント</h2>
               <p>
-                気になる情報を見比べる前に、次のような観点をメモしておくと、自分に合う婚活スタイルを考えやすくなります。
+                気になるサービスを見つけたら、登録前に次の項目をチェックしておくと、あとで判断を見直しやすくなります。
               </p>
             </div>
             <ul>
@@ -158,35 +165,22 @@ export default async function MarriageAppsPage({ searchParams }: MarriageAppsPag
             </ul>
           </section>
 
-          <section className="apps-difference" aria-labelledby="apps-difference-title">
-            <div>
-              <p className="eyebrow">Style</p>
-              <h2 id="apps-difference-title">結婚相談所との違いも一緒に整理する</h2>
-              <p>
-                どちらが良いと決めつけるのではなく、サポートの受け方や費用感、進めるペースの違いを見ながら、自分に合う選択肢を考えるための土台にします。
-              </p>
-            </div>
-            <div className="apps-difference-grid">
-              {differenceItems.map((item) => (
-                <article className="apps-difference-card" key={item.title}>
-                  <h3>{item.title}</h3>
-                  <p>{item.body}</p>
-                </article>
-              ))}
-            </div>
-          </section>
-
           <section className="apps-next-step" aria-labelledby="apps-next-title">
             <div>
-              <p className="eyebrow">With Diagnosis</p>
-              <h2 id="apps-next-title">診断結果と合わせて選択肢を整理する</h2>
+              <p className="eyebrow">Next Step</p>
+              <h2 id="apps-next-title">外部リンクではなく、まずは内部ページで整理する</h2>
               <p>
-                まだ自分に合いそうな婚活スタイルがはっきりしていない場合は、10問の診断で大切にしたい価値観や進め方を確認してから、このページの観点を見直してみてください。診断結果と合わせて見ると、アプリ選びの優先順位を整理しやすくなります。
+                比較軸を確認したあとに、診断結果の見直しや婚活コラムを読むことで、自分に合う進め方をより具体的に考えやすくなります。
               </p>
             </div>
-            <Link className="diagnosis-button diagnosis-button--subtle" href="/diagnosis">
-              10問診断で整理する
-            </Link>
+            <div className="apps-next-step__actions">
+              <Link className="diagnosis-button diagnosis-button--subtle" href="/diagnosis">
+                まずは診断結果を見直す
+              </Link>
+              <Link className="diagnosis-button diagnosis-button--subtle" href="/articles">
+                婚活コラムを読む
+              </Link>
+            </div>
           </section>
           <DiagnosisReturnLink searchParams={params} />
         </section>

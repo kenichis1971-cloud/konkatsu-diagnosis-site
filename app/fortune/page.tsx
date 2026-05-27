@@ -68,6 +68,13 @@ const fortuneMenus = [
   },
 ];
 
+const phoneConsultationChecklist = [
+  "何を相談したいのかを、ひとことで言える形にできているか",
+  "どこまでを占いや相談に求めるのか、自分の中で線引きできているか",
+  "相談後も自分で決める余白を残せるように意識できるか",
+  "料金や利用時間の上限を、事前に決めてから使えるか",
+];
+
 const preparationSteps = [
   "婚活診断の結果を読み返し、気になった言葉をメモする",
   "結婚生活で大切にしたいことを、条件と気持ちに分けて書き出す",
@@ -163,6 +170,40 @@ export default async function FortunePage({ searchParams }: FortunePageProps) {
                 <li key={step}>{step}</li>
               ))}
             </ul>
+          </section>
+
+
+          <section className="fortune-phone-option" aria-labelledby="fortune-phone-option-title">
+            <div>
+              <p className="eyebrow">Phone Consultation Option</p>
+              <h2 id="fortune-phone-option-title">電話占い・相談サービスを使う前に考えたいこと</h2>
+              <p>
+                電話占いや相談サービスは、悩みの答えを決めてもらうためではなく、今の気持ちを言葉にして、結婚への迷いや不安を落ち着いて整理するための手段のひとつです。
+                すぐに決断するためではなく、ひとりで抱え込みすぎているときに、考える順番を整える補助として活用しやすくなります。
+              </p>
+            </div>
+            <div className="fortune-phone-option__content">
+              <div className="fortune-phone-option__checklist" aria-label="利用前チェックリスト">
+                <h3>利用前チェックリスト</h3>
+                <ul>
+                  {phoneConsultationChecklist.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="fortune-phone-option__status" aria-label="電話占い比較導線の状況">
+                <span>準備中</span>
+                <p>電話占いサービスの比較リンクは準備中です。</p>
+                <p>必要な方に向けて、後日ご案内予定です。</p>
+              </div>
+            </div>
+            <p className="fortune-phone-option__article-links">
+              先に気持ちを言葉にしたいときは、
+              <Link href="/articles/review-marriage-values">結婚観を見直すコラム</Link>
+              や
+              <Link href="/articles/when-marriage-activities-feel-tiring">婚活疲れを感じたときのコラム</Link>
+              も参考にしてください。
+            </p>
           </section>
 
           <section className="fortune-note" aria-labelledby="fortune-note-title">
